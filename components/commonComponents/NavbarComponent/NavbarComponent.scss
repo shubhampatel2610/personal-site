@@ -1,0 +1,46 @@
+.navbarStyles {
+  padding: 0px 20px;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.desktopNavbarStyles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s;
+  height: 12vh;
+  width: 100%;
+
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+  }
+
+  .navbarTitle {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+
+  .navlinkContainer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .singleNavlink {
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        color: #67e8f9;
+      }
+    }
+  }
+}

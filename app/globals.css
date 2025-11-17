@@ -1,3 +1,8 @@
 @import "tailwindcss";
 
 @import "primereact/resources/themes/lara-light-cyan/theme.css";
+
+.layoutStyles {
+    background: #0d0d1f !important;
+    color: #ffffff !important;
+}
