@@ -1,13 +1,8 @@
-import { Button } from "primereact/button";
+import HomeSection from "@/components/sections/HomeSection/HomeSection";
 import React from "react";
 
 const HomePage = () => {
-  return (
-    <div>
-      Home Page
-      <Button label="Home" />
-    </div>
-  );
+  return <HomeSection />;
 };
 
 export default HomePage;
