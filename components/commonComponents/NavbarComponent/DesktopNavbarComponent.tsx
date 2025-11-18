@@ -1,10 +1,16 @@
+"use client";
+
 import React from "react";
 import "./NavbarComponent.scss";
 import AppConstants from "@/constant/AppConstants";
 import Link from "next/link";
 import { Button } from "primereact/button";
+import { observer } from "mobx-react-lite";
+import { NavbarStore } from "@/store/store";
 
-const DesktopNavbarComponent = () => {
+const DesktopNavbarComponent = observer(() => {
+  const navbarStore = NavbarStore;
+  
   return (
     <div className="desktopNavbarStyles">
       <div className="logoContainer">
@@ -31,6 +37,6 @@ const DesktopNavbarComponent = () => {
       </div>
     </div>
   );
-};
+});
 
 export default DesktopNavbarComponent;
