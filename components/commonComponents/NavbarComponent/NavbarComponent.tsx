@@ -1,15 +1,18 @@
-import React from "react";
+"use client";
+
 import "./NavbarComponent.scss";
 import DesktopNavbarComponent from "./DesktopNavbarComponent";
 import MobileNavbarComponent from "./MobileNavbarComponent";
+import { observer } from "mobx-react-lite";
+import NavbarStore from "@/store/NavbarStore";
 
-const NavbarComponent = () => {
+const NavbarComponent = observer(() => {
   return (
     <div className="navbarStyles">
       <DesktopNavbarComponent />
-      <MobileNavbarComponent />
+      {(NavbarStore.isMobileMenuVisible) && <MobileNavbarComponent />}
     </div>
   );
-};
+});
 
 export default NavbarComponent;

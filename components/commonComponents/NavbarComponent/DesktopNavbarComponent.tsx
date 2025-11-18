@@ -1,18 +1,34 @@
 "use client";
 
-import React from "react";
+import { useEffect } from "react";
 import "./NavbarComponent.scss";
 import AppConstants from "@/constant/AppConstants";
 import Link from "next/link";
 import { Button } from "primereact/button";
 import { observer } from "mobx-react-lite";
-import { NavbarStore } from "@/store/store";
+import NavbarStore from "@/store/NavbarStore";
 
 const DesktopNavbarComponent = observer(() => {
-  const navbarStore = NavbarStore;
-  
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 90) {
+        NavbarStore.setNavBgColor(true);
+      } else {
+        NavbarStore.setNavBgColor(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="desktopNavbarStyles">
+    <div
+      className={`desktopNavbarStyles ${
+        NavbarStore.navbgColor ? "navBgActive" : ""
+      }`}
+    >
       <div className="logoContainer">
         <i className="pi pi-code" style={{ fontSize: "2rem" }}></i>
         <span className="navbarTitle">{AppConstants.USER_NAME}</span>
@@ -31,7 +47,12 @@ const DesktopNavbarComponent = observer(() => {
           icon="pi pi-download"
           iconPos="right"
         />
-        <div className="menuIcon lg:hidden">
+        <div
+          className="menuIcon"
+          onClick={() => {
+            NavbarStore.showMobileMenu(true);
+          }}
+        >
           <i className="pi pi-ellipsis-v"></i>
         </div>
       </div>

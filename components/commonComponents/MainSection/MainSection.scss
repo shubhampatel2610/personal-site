@@ -1,0 +1,23 @@
+:root {
+  --site-bg: #0d0d1f;
+  --navbar-bg: #0f0f31;
+  --site-text: #ffffff;
+  --site-links-hover: #67e8f9;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  color: var(--site-text);
+  overflow: hidden;
+
+  .parentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
