@@ -1,6 +1,7 @@
 class AppConstants {
   // Navbar Constants
   static USER_NAME = "Shubham";
+  static DOWNLOAD_BUTTON_LABEL = "Download CV";
 
   static NAVLINKS = [
     { id: 1, url: "#", label: "Home" },

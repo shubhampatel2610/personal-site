@@ -2,7 +2,36 @@
 
 @import "primereact/resources/themes/lara-light-cyan/theme.css";
 
+:root {
+    --site-bg: #0d0d1f;
+    --site-text: #ffffff;
+    --site-button-bg: #29297e;
+    --site-button-hover-bg: #3b3bbf;
+}
+
 .layoutStyles {
-    background: #0d0d1f !important;
-    color: #ffffff !important;
+    background: var(--site-bg) !important;
+    color: var(--site-text) !important;
+}
+
+.p-button {
+    border-radius: 0.5rem;
+    height: 48px !important;
+    width: auto !important;
+    background: var(--site-button-bg);
+    border: none;
+
+    .p-button-label,
+    .p-button-icon {
+        font-size: 1rem !important;
+        font-weight: 500 !important;
+    }
+
+    &:hover {
+        background: var(--site-button-hover-bg);
+    }
+
+    &:focus {
+        box-shadow: none !important;
+    }
 }

@@ -2,6 +2,7 @@ import React from "react";
 import "./NavbarComponent.scss";
 import AppConstants from "@/constant/AppConstants";
 import Link from "next/link";
+import { Button } from "primereact/button";
 
 const DesktopNavbarComponent = () => {
   return (
@@ -16,6 +17,17 @@ const DesktopNavbarComponent = () => {
             {link.label}
           </Link>
         ))}
+      </div>
+      <div className="buttonContainer">
+        <Button
+          className="downloadCvButton"
+          label={AppConstants.DOWNLOAD_BUTTON_LABEL}
+          icon="pi pi-download"
+          iconPos="right"
+        />
+        <div className="menuIcon lg:hidden">
+          <i className="pi pi-ellipsis-v"></i>
+        </div>
       </div>
     </div>
   );

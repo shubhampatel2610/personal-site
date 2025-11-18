@@ -1,3 +1,9 @@
+:root {
+  --site-bg: #0d0d1f;
+  --site-text: #ffffff;
+  --site-links-hover: #67e8f9;
+}
+
 .navbarStyles {
   padding: 0px 20px;
   position: fixed;
@@ -25,13 +31,14 @@
   .navbarTitle {
     font-size: 24px;
     font-weight: 600;
-    color: #ffffff;
+    color: var(--site-text);
     text-transform: uppercase;
   }
 
   .navlinkContainer {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 15px;
 
     .singleNavlink {
@@ -39,7 +46,25 @@
       transition: all 0.2s;
 
       &:hover {
-        color: #67e8f9;
+        color: var(--site-links-hover);
+      }
+    }
+  }
+
+  .buttonContainer {
+    display: flex;
+    align-items: center;
+
+    .menuIcon {
+      display: flex;
+      justify-content: center;
+      font-size: 28px;
+      width: 28px;
+      color: var(--site-text);
+      cursor: pointer;
+      transition: all 0.2s;
+      &:hover {
+        color: var(--site-links-hover);
       }
     }
   }
