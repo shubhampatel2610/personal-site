@@ -4,10 +4,14 @@ import { observer } from "mobx-react-lite";
 import AppConstants from "@/constant/AppConstants";
 import Typewriter from "typewriter-effect";
 import { Button } from "primereact/button";
+import ParticleBackground from "@/components/common/ParticleBackground";
 
 const MainSection = observer(() => {
   return (
     <div className="mainContainer">
+      <div className="particleWrapper">
+        <ParticleBackground />
+      </div>
       <div className="parentContainer">
         <div className="profilePictureContainer">
           <Image
