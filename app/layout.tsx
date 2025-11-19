@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { PrimeReactProvider } from "primereact/api";
 import "./globals.css";
 import 'primeicons/primeicons.css';
+import 'primeflex/primeflex.css';
 import NavbarComponent from "@/components/commonComponents/NavbarComponent/NavbarComponent";
 
 const customFonts = Inter({
