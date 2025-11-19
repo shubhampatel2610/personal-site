@@ -11,7 +11,7 @@ import NavbarStore from "@/store/NavbarStore";
 const DesktopNavbarComponent = observer(() => {
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= 90) {
+      if (window.scrollY >= 50) {
         NavbarStore.setNavBgColor(true);
       } else {
         NavbarStore.setNavBgColor(false);
