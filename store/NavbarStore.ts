@@ -1,4 +1,3 @@
-// ...existing code...
 import { makeAutoObservable } from "mobx";
 
 export class NavbarSlice {

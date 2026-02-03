@@ -35,3 +35,8 @@
         box-shadow: none !important;
     }
 }
+
+.p-card-body,
+.p-card-content {
+    padding: 0;
+}

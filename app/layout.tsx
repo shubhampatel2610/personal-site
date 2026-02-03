@@ -4,7 +4,7 @@ import { PrimeReactProvider } from "primereact/api";
 import "./globals.css";
 import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
-import NavbarComponent from "@/components/commonComponents/NavbarComponent/NavbarComponent";
+import NavbarComponent from "@/components/components/NavbarComponent/NavbarComponent";
 
 const customFonts = Inter({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
