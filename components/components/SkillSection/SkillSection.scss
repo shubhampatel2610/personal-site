@@ -1,0 +1,35 @@
+:root {
+  --site-bg: #0d0d1f;
+  --navbar-bg: #0f0f31;
+  --site-text: #ffffff;
+  --site-links-hover: #67e8f9;
+  --card-background: #28287e;
+}
+
+.skillsMainContainer {
+  width: 100%;
+  color: var(--site-text);
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .skillsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+
+    .headerContainer {
+      width: 100%;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .skillsListContainer {
+      width: 100%;
+    }
+  }
+}

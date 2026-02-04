@@ -1,3 +1,29 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import React from "react";
+import NextJsIcon from "../public/skillIcons/NextJsIcon";
+import ReactJsIcon from "@/public/skillIcons/ReactJsIcon";
+import TypescriptIcon from "@/public/skillIcons/TypescriptIcon";
+import JavascriptIcon from "@/public/skillIcons/JavascriptIcon";
+import HtmlIcon from "@/public/skillIcons/HtmlIcon";
+import CssIcon from "@/public/skillIcons/CssIcon";
+import SassIcon from "@/public/skillIcons/SassIcon";
+import ReduxIcon from "@/public/skillIcons/ReduxIcon";
+import MobxIcon from "@/public/skillIcons/MobxIcon";
+import GitIcon from "@/public/skillIcons/GitIcon";
+import JestIcon from "@/public/skillIcons/JestIcon";
+import VSCodeIcon from "@/public/toolsIcons/VSCodeIcon";
+import GithubIcon from "@/public/toolsIcons/GithubIcon";
+import BitbucketIcon from "@/public/toolsIcons/BitbucketIcon";
+import JiraIcon from "@/public/toolsIcons/JiraIcon";
+import FigmaIcon from "@/public/toolsIcons/FigmaIcon";
+import PostmanIcon from "@/public/toolsIcons/PostmanIcon";
+
+export type CarouselItem = {
+  id: number;
+  name: string;
+  component?: React.ComponentType<any> | null;
+};
+
 class AppConstants {
   // Navbar Constants
   static USER_NAME = "Shubham";
@@ -90,10 +116,44 @@ class AppConstants {
         "Used Git and Bitbucket for version control, including branching , code reviews, merging, and conflict resolution.",
         "Debugged and resolved technical issues across the application to ensure system stability, performance, and a smooth user experience.",
       ],
-    }
+    },
   ];
   static SHOW_MORE_TEXT = "Show More";
   static SHOW_LESS_TEXT = "Show Less";
+
+  // Skills Section Constants
+  static SKILLS_HEADER = "Skills";
+  static TOOLS_HEADER = "Tools & Technologies";
+  static SKILLS_LIST: CarouselItem[] = [
+    { id: 1, name: "Next.js", component: NextJsIcon },
+    { id: 2, name: "React.js", component: ReactJsIcon },
+    { id: 3, name: "TypeScript", component: TypescriptIcon },
+    { id: 4, name: "JavaScript", component: JavascriptIcon },
+    { id: 5, name: "HTML5", component: HtmlIcon },
+    { id: 6, name: "CSS3", component: CssIcon },
+    { id: 7, name: "Sass", component: SassIcon },
+    { id: 8, name: "Redux", component: ReduxIcon },
+    { id: 9, name: "Mobx", component: MobxIcon },
+    { id: 10, name: "Git", component: GitIcon },
+    { id: 11, name: "Jest", component: JestIcon },
+    { id: 12, name: "Enzyme", component: null },
+    { id: 13, name: "React Testing Library", component: null },
+    // { id: 14, name: "Java" },
+    // { id: 15, name: "Spring Boot" },
+    // { id: 16, name: "Node.js" },
+    // { id: 17, name: "Express.js" },
+    // { id: 18, name: "MongoDB" },
+    // { id: 19, name: "PostgreSQL" },
+  ];
+  static TOOLS_LIST: CarouselItem[] = [
+    { id: 1, name: "Visual Studio Code", component: VSCodeIcon },
+    { id: 2, name: "GitHub", component: GithubIcon },
+    { id: 3, name: "Bitbucket", component: BitbucketIcon },
+    { id: 5, name: "Jira", component: JiraIcon },
+    { id: 7, name: "Figma", component: FigmaIcon },
+    { id: 4, name: "Postman", component: PostmanIcon },
+    // { id: 6, name: "SonarQube" },
+  ];
 
   // Education Section Constants
   static EDUCATION_HEADER = "Education";
