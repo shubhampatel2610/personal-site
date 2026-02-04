@@ -7,6 +7,21 @@
     --site-text: #ffffff;
     --site-button-bg: #29297e;
     --site-button-hover-bg: #3b3bbf;
+
+    /* Scrollbar variables (hex + alpha variants) */
+    --scrollbar-thumb-hex: #ffffff;
+    --scrollbar-track-hex: #ffffff;
+    --scrollbar-thumb: #ffffff1f;
+    /* 12% alpha */
+    --scrollbar-thumb-hover: #ffffff2e;
+    /* 18% alpha */
+    --scrollbar-thumb-active: #ffffff38;
+    /* ~22% alpha */
+    --scrollbar-track: #ffffff05;
+    /* 2% alpha */
+    --scrollbar-focus: #ffffff14;
+    /* 8% alpha for focus ring */
+    --scrollbar-width: 12px;
 }
 
 .layoutStyles {
@@ -39,4 +54,38 @@
 .p-card-body,
 .p-card-content {
     padding: 0;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+    height: var(--scrollbar-width);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    border-radius: 999px;
+    border: 3px solid transparent;
+    background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-thumb-hover);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: var(--scrollbar-thumb-active);
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
