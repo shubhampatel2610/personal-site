@@ -11,19 +11,20 @@ interface RadioComponentProps {
 }
 
 const RadioComponent = (props: RadioComponentProps) => {
-  const isChecked: boolean = props.selectedValue ? props.selectedValue === props.value : false;
+  const { id, name, value, label, onChange, selectedValue } = props;
+  const isChecked: boolean = selectedValue ? selectedValue === value : false;
 
   return (
     <div className="flex align-items-center">
       <RadioButton
-        inputId={props.id}
-        name={props.name}
-        value={props.value}
-        onChange={props.onChange}
+        inputId={id}
+        name={name}
+        value={value}
+        onChange={(e) => onChange(e)}
         checked={isChecked}
       />
-      <label htmlFor={props.id} className="ml-2">
-        {props.label}
+      <label htmlFor={id} className="ml-2">
+        {label}
       </label>
     </div>
   );

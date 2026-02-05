@@ -7,6 +7,7 @@
     --site-text: #ffffff;
     --site-button-bg: #29297e;
     --site-button-hover-bg: #3b3bbf;
+    --site-links-hover: #67e8f9;
 
     /* Scrollbar variables (hex + alpha variants) */
     --scrollbar-thumb-hex: #ffffff;
@@ -88,4 +89,27 @@
 * {
     scrollbar-width: thin;
     scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+.p-float-label {
+    width: 100% !important;
+    color: var(--site-text) !important;
+
+    label {
+        color: var(--site-text) !important;
+    }
+}
+
+.p-inputtextarea,
+.p-inputtext {
+    width: 100% !important;
+    background: transparent !important;
+    border: 1px solid var(--site-button-bg) !important;
+    color: var(--site-text) !important;
+    border-radius: 0.5rem !important;
+
+    &:focus {
+        border-color: var(--site-links-hover) !important;
+        box-shadow: none !important;
+    }
 }
