@@ -4,6 +4,7 @@
   --site-text: #ffffff;
   --site-links-hover: #67e8f9;
   --card-background: #28287e;
+  --faded-text: #cccccc;
 }
 
 .expMainContainer {
@@ -69,7 +70,7 @@
 
     .duration {
       font-size: 1rem;
-      color: #ccc;
+      color: var(--faded-text);
     }
   }
 
