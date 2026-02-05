@@ -155,6 +155,23 @@ class AppConstants {
     // { id: 6, name: "SonarQube" },
   ];
 
+  // Contact Section Constants
+  static CONTACT_HEADER = "Let's Connect and Work Together!";
+  static CONTACT_SUBHEADER =
+    "Ready to bring your ideas to life? Get in touch with me today! even if you just want to say hii! I am always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Let's create something amazing together!";
+  static CONTACT_PHONE = "+91 7990037804";
+  static CONTACT_EMAIL = "shubham2610patel@gmail.com";
+  static CONTACT_LOCATION = "Ahmedabad, Gujarat, India";
+  static CONTACT_LINKEDIN = "https://www.linkedin.com/in/shubham-patel-2610/";
+  static CONTACT_GITHUB = "github.com/shubham2610patel";
+  static CONTACT_FORM_LABELS = {
+    name: "Name",
+    email: "Email Address",
+    phone: "Phone Number",
+    message: "Your Message",
+    submitButton: "Send",
+  };
+
   // Education Section Constants
   static EDUCATION_HEADER = "Education";
 }
