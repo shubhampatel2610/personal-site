@@ -30,13 +30,13 @@ class AppConstants {
   static DOWNLOAD_BUTTON_LABEL = "Download CV";
 
   static NAVLINKS = [
-    { id: 1, url: "#", label: "Home" },
-    { id: 2, url: "#", label: "About" },
-    { id: 3, url: "#", label: "Experience" },
-    { id: 4, url: "#", label: "Skills" },
-    { id: 5, url: "#", label: "Projects" },
-    { id: 6, url: "#", label: "Testimonials" },
-    { id: 7, url: "#", label: "Contact" },
+    { id: 1, url: "#home", label: "Home" },
+    { id: 2, url: "#about", label: "About" },
+    { id: 3, url: "#experience", label: "Experience" },
+    { id: 4, url: "#skills", label: "Skills" },
+    { id: 5, url: "#projects", label: "Projects" },
+    { id: 6, url: "#testimonials", label: "Testimonials" },
+    { id: 7, url: "#contact", label: "Contact" },
   ];
 
   // Main Section Constants

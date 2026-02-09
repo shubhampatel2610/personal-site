@@ -20,7 +20,14 @@ const MobileNavbarComponent = observer(() => {
         </div>
         <div className="navlinksContainer">
           {AppConstants.NAVLINKS.map((link) => (
-            <Link className="singleNavlink" key={link.id} href={link.url}>
+            <Link
+              className="singleNavlink"
+              key={link.id}
+              href={link.url}
+              onClick={() => {
+                NavbarStore.showMobileMenu(false);
+              }}
+            >
               <label>{link.label}</label>
             </Link>
           ))}

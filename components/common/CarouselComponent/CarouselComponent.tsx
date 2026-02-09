@@ -12,7 +12,7 @@ interface CarouselComponentProps {
 }
 
 const CarouselComponent = (props: CarouselComponentProps) => {
-  const { itemList, horizontalDirection, itemWidth = 140, itemHeight = 200, gap = 16, speed = 50 } = props;
+  const { itemList, horizontalDirection, itemWidth = 140, itemHeight = 200, gap = 16, speed = 0 } = props;
 
   // Refs and state
   const containerRef = useRef<HTMLDivElement | null>(null);

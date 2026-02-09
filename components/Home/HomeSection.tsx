@@ -10,11 +10,21 @@ import ContactSection from "../components/ContactSection/ContactSection";
 const HomeSection = observer(() => {
   return (
     <div className="overflow-hidden">
-      <MainSection />
-      <ServiceSection />
-      <ExperienceSection />
-      <SkillSection />
-      <ContactSection />
+      <div id="home">
+        <MainSection />
+      </div>
+      <div id="about">
+        <ServiceSection />
+      </div>
+      <div id="experience">
+        <ExperienceSection />
+      </div>
+      <div id="skills">
+        <SkillSection />
+      </div>
+      <div id="contact">
+        <ContactSection />
+      </div>
     </div>
   );
 });

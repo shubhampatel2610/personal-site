@@ -2,6 +2,15 @@
 
 @import "primereact/resources/themes/lara-light-cyan/theme.css";
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* Add scroll margin to all elements with IDs to prevent navbar overlap */
+[id] {
+    scroll-margin-top: 12vh;
+}
+
 :root {
     --site-bg: #0d0d1f;
     --site-text: #ffffff;
