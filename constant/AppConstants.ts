@@ -17,6 +17,7 @@ import BitbucketIcon from "@/public/toolsIcons/BitbucketIcon";
 import JiraIcon from "@/public/toolsIcons/JiraIcon";
 import FigmaIcon from "@/public/toolsIcons/FigmaIcon";
 import PostmanIcon from "@/public/toolsIcons/PostmanIcon";
+import ReactTestingLibraryIcon from "@/public/skillIcons/ReactTestingLibraryIcon";
 
 export type CarouselItem = {
   id: number;
@@ -34,18 +35,17 @@ class AppConstants {
     { id: 2, url: "#about", label: "About" },
     { id: 3, url: "#experience", label: "Experience" },
     { id: 4, url: "#skills", label: "Skills" },
-    { id: 5, url: "#projects", label: "Projects" },
-    { id: 6, url: "#testimonials", label: "Testimonials" },
+    // { id: 5, url: "#projects", label: "Projects" },
+    // { id: 6, url: "#testimonials", label: "Testimonials" },
     { id: 7, url: "#contact", label: "Contact" },
   ];
 
   // Main Section Constants
   static PROFILE_PICTURE_PATH = "/siteImages/profile_picture.jpg";
   static MAIN_SECTION_TAGLINE_1 =
-    "Passionate About Creating Intuitive, Creative, User-Centric ";
-  static MAIN_SECTION_TAGLINE_2 = "Web Solutions.";
+    "Pssionate About Creating AI-powered, Scalable & Pixel-Perfect ";
+  static MAIN_SECTION_TAGLINE_2 = "High Performance Web Experiences.";
   static MAIN_SECTION_INTROLINE = "Hi, I'm Shubham, a";
-  static WORK_BUTTON_LABEL = "See My Work";
 
   // Service Section Constants
   static SERVICE_SECTION_TAGLINE =
@@ -55,33 +55,34 @@ class AppConstants {
       id: 1,
       title: "Frontend Development",
       description:
-        "Crafting responsive and engaging user interfaces using modern frameworks.",
-      iconPath: "/siteImages/icons/frontend_icon.png",
+        "Building high-performance, responsive web UIs with strong proficiency in React/Next.js and TypeScript, robust state management (Redux, MobX), component-driven architecture, accessibility best practices, and rapid feature shipping.",
+      iconPath: "/siteImages/frontend.png",
     },
     {
       id: 2,
       title: "Backend Development",
       description:
-        "Building robust and scalable server-side applications and APIs.",
-      iconPath: "/siteImages/icons/backend_icon.png",
+        "System-level understanding of backend architectures and integrations; familiar with NestJS, Node.js, Java, and Spring Boot — able to implement API integrations, and collaborate on scalable server solutions (not a primary backend specialist).",
+      iconPath: "/siteImages/backend.png",
     },
     {
       id: 3,
       title: "Web Development",
       description:
-        "Creating full-stack web applications with seamless integration.",
-      iconPath: "/siteImages/icons/webdev_icon.png",
+        "Developing end-to-end web solutions based on project requirements, with a strong focus on frontend quality, seamless integration, and reliable on-time delivery.",
+      iconPath: "/siteImages/web-development.png",
     },
     {
       id: 4,
       title: "Freelancing",
-      description: "Delivering tailored web solutions to clients worldwide.",
-      iconPath: "/siteImages/icons/freelance_icon.png",
+      description:
+        "Frontend-focused software developer ready to contribute expertise to client projects. While new to freelancing, I bring strong engineering fundamentals, clear communication, and a commitment to delivering high-quality results on schedule.",
+      iconPath: "/siteImages/freelancing.png",
     },
   ];
 
   // Experience Section Constants
-  static EXPERIENCE_HEADER = "Experience";
+  static EXPERIENCE_HEADER = "Professional Experience";
   static EXPERIENCE_SUBHEADER = "My Journey So Far";
   static EXPERIENCE_DETAILS = [
     {
@@ -136,8 +137,8 @@ class AppConstants {
     { id: 9, name: "Mobx", component: MobxIcon },
     { id: 10, name: "Git", component: GitIcon },
     { id: 11, name: "Jest", component: JestIcon },
-    { id: 12, name: "Enzyme", component: null },
-    { id: 13, name: "React Testing Library", component: null },
+    { id: 12, name: "Enzyme", component: JavascriptIcon },
+    { id: 13, name: "R T L", component: ReactTestingLibraryIcon },
     // { id: 14, name: "Java" },
     // { id: 15, name: "Spring Boot" },
     // { id: 16, name: "Node.js" },
@@ -146,7 +147,7 @@ class AppConstants {
     // { id: 19, name: "PostgreSQL" },
   ];
   static TOOLS_LIST: CarouselItem[] = [
-    { id: 1, name: "Visual Studio Code", component: VSCodeIcon },
+    { id: 1, name: "VS Code", component: VSCodeIcon },
     { id: 2, name: "GitHub", component: GithubIcon },
     { id: 3, name: "Bitbucket", component: BitbucketIcon },
     { id: 5, name: "Jira", component: JiraIcon },
