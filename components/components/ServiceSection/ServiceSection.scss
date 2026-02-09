@@ -1,3 +1,7 @@
+:root {
+  --form-bg: #0f0f31;
+}
+
 .serviceMainContainer {
   width: 100%;
   display: flex;
@@ -32,10 +36,17 @@
   gap: 0.5rem;
   width: 100%;
   flex-wrap: wrap;
+  padding: 15px;
+  height: 100%;
+  border-radius: 10px;
+  background-color: var(--form-bg);
 
   .iconContainer {
-    font-size: 3rem;
-    color: var(--site-links-hover);
+    height: 56px;
+    width: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .titleContainer {
