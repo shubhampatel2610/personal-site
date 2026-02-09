@@ -3,7 +3,6 @@ import "./MainSection.scss";
 import { observer } from "mobx-react-lite";
 import AppConstants from "@/constant/AppConstants";
 import Typewriter from "typewriter-effect";
-import { Button } from "primereact/button";
 import ParticleBackground from "@/components/common/ParticleBackground";
 
 const MainSection = observer(() => {
@@ -40,14 +39,6 @@ const MainSection = observer(() => {
               }}
             />
           </span>
-        </div>
-        <div className="buttonContainer">
-          <Button
-            className="workButton"
-            label={AppConstants.WORK_BUTTON_LABEL}
-            icon="pi pi-arrow-right"
-            iconPos="right"
-          />
         </div>
       </div>
     </div>
