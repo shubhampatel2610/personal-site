@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { useEffect } from "react";
@@ -22,6 +23,11 @@ const DesktopNavbarComponent = observer(() => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleDownloadClick = (e: any) => {
+    e.preventDefault();
+    window.open(AppConstants.DOWNLOAD_CV_LINK, "_blank");
+  };
 
   return (
     <div
@@ -54,6 +60,7 @@ const DesktopNavbarComponent = observer(() => {
           label={AppConstants.DOWNLOAD_BUTTON_LABEL}
           icon="pi pi-download"
           iconPos="right"
+          onClick={handleDownloadClick}
         />
         <div
           className="menuIcon"

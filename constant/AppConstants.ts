@@ -39,6 +39,7 @@ class AppConstants {
     // { id: 6, url: "#testimonials", label: "Testimonials" },
     { id: 7, url: "#contact", label: "Contact" },
   ];
+  static DOWNLOAD_CV_LINK = "https://drive.google.com/drive/folders/1pqGbz5LVK53attjk8Cv6TVC1bMc7NO0Z?usp=sharing";
 
   // Main Section Constants
   static PROFILE_PICTURE_PATH = "/siteImages/profile_picture.jpg";
