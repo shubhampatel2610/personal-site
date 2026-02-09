@@ -5,6 +5,8 @@ export class NavbarSlice {
 
   navbgColor: boolean = false;
 
+  activeSection: string = "home";
+
   constructor() {
     makeAutoObservable(this);
   }
@@ -15,6 +17,10 @@ export class NavbarSlice {
 
   setNavBgColor(value: boolean) {
     this.navbgColor = value;
+  }
+
+  setActiveSection(sectionId: string) {
+    this.activeSection = sectionId;
   }
 }
 

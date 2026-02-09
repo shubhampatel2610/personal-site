@@ -34,11 +34,19 @@ const DesktopNavbarComponent = observer(() => {
         <span className="navbarTitle">{AppConstants.USER_NAME}</span>
       </div>
       <div className="navlinkContainer">
-        {AppConstants.NAVLINKS.map((link) => (
-          <Link className="singleNavlink" key={link.id} href={link.url}>
-            {link.label}
-          </Link>
-        ))}
+        {AppConstants.NAVLINKS.map((link) => {
+          const sectionId = link.url.replace("#", "");
+          const isActive = NavbarStore.activeSection === sectionId;
+          return (
+            <Link
+              className={`singleNavlink ${isActive ? "active" : ""}`}
+              key={link.id}
+              href={link.url}
+            >
+              {link.label}
+            </Link>
+          );
+        })}
       </div>
       <div className="buttonContainer">
         <Button

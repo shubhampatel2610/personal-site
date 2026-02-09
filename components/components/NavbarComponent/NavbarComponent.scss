@@ -53,6 +53,12 @@
       &:hover {
         color: var(--site-links-hover);
       }
+
+      &.active {
+        color: var(--site-links-hover);
+        border-bottom: 2px solid var(--site-links-hover);
+        padding-bottom: 3px;
+      }
     }
   }
 
@@ -129,6 +135,14 @@
 
         label {
           border-bottom: 1px solid var(--site-links-hover);
+        }
+      }
+
+      &.active {
+        color: var(--site-links-hover);
+
+        label {
+          border-bottom: 2px solid var(--site-links-hover);
         }
       }
 

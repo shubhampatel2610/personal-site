@@ -19,18 +19,22 @@ const MobileNavbarComponent = observer(() => {
           <i className="pi pi-times"></i>
         </div>
         <div className="navlinksContainer">
-          {AppConstants.NAVLINKS.map((link) => (
-            <Link
-              className="singleNavlink"
-              key={link.id}
-              href={link.url}
-              onClick={() => {
-                NavbarStore.showMobileMenu(false);
-              }}
-            >
-              <label>{link.label}</label>
-            </Link>
-          ))}
+          {AppConstants.NAVLINKS.map((link) => {
+            const sectionId = link.url.replace("#", "");
+            const isActive = NavbarStore.activeSection === sectionId;
+            return (
+              <Link
+                className={`singleNavlink ${isActive ? "active" : ""}`}
+                key={link.id}
+                href={link.url}
+                onClick={() => {
+                  NavbarStore.showMobileMenu(false);
+                }}
+              >
+                <label>{link.label}</label>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </div>
