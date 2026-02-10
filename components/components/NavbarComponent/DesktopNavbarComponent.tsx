@@ -39,25 +39,32 @@ const DesktopNavbarComponent = observer(() => {
         <i className="pi pi-code" style={{ fontSize: "2rem" }}></i>
         <span className="navbarTitle">{AppConstants.USER_NAME}</span>
       </div>
-      <div className="navlinkContainer">
-        {AppConstants.NAVLINKS.map((link) => {
-          const sectionId = link.url.replace("#", "");
-          const isActive = NavbarStore.activeSection === sectionId;
-          return (
-            <Link
-              className={`singleNavlink ${isActive ? "active" : ""}`}
-              key={link.id}
-              href={link.url}
-            >
-              {link.label}
-            </Link>
-          );
-        })}
-      </div>
+      {(NavbarStore.currentDevice === AppConstants.DESKTOP_DEVICE) ? (
+        <div className="navlinkContainer">
+          {AppConstants.NAVLINKS.map((link) => {
+            const sectionId = link.url.replace("#", "");
+            const isActive = NavbarStore.activeSection === sectionId;
+            return (
+              <Link
+                className={`singleNavlink ${isActive ? "active" : ""}`}
+                key={link.id}
+                href={link.url}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+        </div>
+      ) : (
+        <></>
+      )}
       <div className="buttonContainer">
         <Button
-          className="downloadCvButton"
-          label={AppConstants.DOWNLOAD_BUTTON_LABEL}
+          label={
+            NavbarStore.currentDevice !== AppConstants.MOBILE_DEVICE
+              ? AppConstants.DOWNLOAD_BUTTON_LABEL
+              : ""
+          }
           icon="pi pi-download"
           iconPos="right"
           onClick={handleDownloadClick}
@@ -68,7 +75,7 @@ const DesktopNavbarComponent = observer(() => {
             NavbarStore.showMobileMenu(true);
           }}
         >
-          <i className="pi pi-ellipsis-v"></i>
+          <i className="pi pi-bars"></i>
         </div>
       </div>
     </div>

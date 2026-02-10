@@ -29,6 +29,9 @@ class AppConstants {
   // Navbar Constants
   static USER_NAME = "Shubham";
   static DOWNLOAD_BUTTON_LABEL = "Download CV";
+  static DESKTOP_DEVICE = "desktop";
+  static MOBILE_DEVICE = "mobile";
+  static TABLET_DEVICE = "tablet";
 
   static NAVLINKS = [
     { id: 1, url: "#home", label: "Home" },
@@ -90,7 +93,7 @@ class AppConstants {
       id: 1,
       role: "Associate Software Developer Trainee",
       company: "Eliteware Solutions",
-      location: "Vadodara, Gujarat, India",
+      location: "Vadodara, India",
       duration: "July 2023 - Jan 2024",
       description: [
         "Contributed to the development of B2B and B2C SaaS platforms for managing EV charging stations, including tenant management, user access control, RFID integration and usage monitoring.",
@@ -105,7 +108,7 @@ class AppConstants {
       id: 2,
       role: "Software Developer",
       company: "KIT Solutions Pvt Ltd",
-      location: "Vadodara, Gujarat, India",
+      location: "Vadodara, India",
       duration: "March 2024 - Present",
       description: [
         "Developed and enhanced high-quality, scalable features for a B2B SaaS platform used by aviation operations teams to communicate with ATC, airports, and flight systems.",

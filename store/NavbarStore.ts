@@ -7,6 +7,8 @@ export class NavbarSlice {
 
   activeSection: string = "home";
 
+  currentDevice: string = "desktop";
+
   constructor() {
     makeAutoObservable(this);
   }
@@ -21,6 +23,10 @@ export class NavbarSlice {
 
   setActiveSection(sectionId: string) {
     this.activeSection = sectionId;
+  }
+
+  setCurrentDevice(device: string) {
+    this.currentDevice = device;
   }
 }
 

@@ -51,6 +51,11 @@ html {
         font-weight: 500 !important;
     }
 
+    @media (max-width: 480px) {
+        width: revert-layer !important;
+        
+    }
+
     &:hover {
         background: var(--site-button-hover-bg);
     }

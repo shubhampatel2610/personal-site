@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const MobileNavbarComponent = observer(() => {
   return (
-    <div>
+    <>
       <div className="mobileNavbarOverlay"></div>
       <div className="mobileNavbarContainer">
         <div
@@ -37,7 +37,7 @@ const MobileNavbarComponent = observer(() => {
           })}
         </div>
       </div>
-    </div>
+    </>
   );
 });
 

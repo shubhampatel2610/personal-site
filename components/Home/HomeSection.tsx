@@ -7,9 +7,25 @@ import ServiceSection from "@/components/components/ServiceSection/ServiceSectio
 import ExperienceSection from "../components/ExperienceSection/ExperienceSection";
 import SkillSection from "../components/SkillSection/SkillSection";
 import ContactSection from "../components/ContactSection/ContactSection";
+import { useEffect } from "react";
+import NavbarStore from "@/store/NavbarStore";
+import AppConstants from "@/constant/AppConstants";
 
 const HomeSection = observer(() => {
   useScrollSpy(["home", "about", "experience", "skills", "contact"]);
+
+  const getDeviceType = () => {
+    const width = window.innerWidth;
+    if (width < 750) return AppConstants.MOBILE_DEVICE;
+    if (width < 1020) return AppConstants.TABLET_DEVICE;
+    return AppConstants.DESKTOP_DEVICE;
+  };
+
+  useEffect(() => {
+    const onResize = () => NavbarStore.setCurrentDevice(getDeviceType());
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
 
   return (
     <div className="overflow-hidden">
