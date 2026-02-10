@@ -33,6 +33,23 @@
     width: 60%;
     gap: 1rem;
 
+    @media (max-width: 768px) {
+      width: 75%;
+
+      .profilePictureContainer {
+        width: 150px;
+        height: 150px;
+      }
+
+      .taglineContainer {
+        font-size: 1.75rem;
+      }
+
+      .introlineContainer {
+        font-size: 1rem;
+      }
+    }
+
     .profilePictureContainer {
       border: 1px solid var(--site-text);
       border-radius: 50%;
@@ -76,6 +93,35 @@
 
     .workButton {
       border-radius: 25px;
+    }
+
+    @media (max-width: 768px) {
+      width: 75%;
+
+      .profilePictureContainer {
+        width: 150px;
+        height: 150px;
+      }
+
+      .taglineContainer {
+        font-size: 1.75rem;
+      }
+
+      .introlineContainer {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      width: 90%;
+      
+      .taglineContainer {
+        font-size: 1.5rem;
+      }
+
+      .introlineContainer {
+        font-size: 0.9rem;
+      }
     }
   }
 }

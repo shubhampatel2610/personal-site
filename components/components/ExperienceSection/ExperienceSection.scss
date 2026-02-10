@@ -49,6 +49,26 @@
       }
     }
   }
+
+  @media (max-width: 768px) {
+    padding: 20px 10px;
+
+    .expDetailsContainer {
+      .headerText {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px;
+
+    .expDetailsContainer {
+      .headerText {
+        font-size: 1rem;
+      }
+    }
+  }
 }
 
 // Card Styles
@@ -71,6 +91,30 @@
     .duration {
       font-size: 1rem;
       color: var(--faded-text);
+    }
+
+    @media (max-width: 768px) {
+      padding: 10px;
+
+      .companyName {
+        font-size: 1.1rem;
+      }
+
+      .duration {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      padding: 8px;
+
+      .companyName {
+        font-size: 1rem;
+      }
+
+      .duration {
+        font-size: 0.8rem;
+      }
     }
   }
 
@@ -100,6 +144,34 @@
         font-weight: 400;
         margin-bottom: 5px;
       }
+
+      @media (max-width: 768px) {
+        .cardLabel {
+          font-size: 1rem;
+        }
+
+        .roleText {
+          font-size: 1.1rem;
+        }
+
+        .locationText {
+          font-size: 0.8rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .cardLabel {
+          font-size: 0.9rem;
+        }
+
+        .roleText {
+          font-size: 1rem;
+        }
+
+        .locationText {
+          font-size: 0.75rem;
+        }
+      }
     }
   }
 
@@ -111,6 +183,22 @@
     li {
       font-size: 0.9rem;
       margin-bottom: 5px;
+    }
+
+    @media (max-width: 768px) {
+      padding-left: 15px;
+
+      li {
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      padding-left: 10px;
+
+      li {
+        font-size: 0.75rem;
+      }
     }
   }
 

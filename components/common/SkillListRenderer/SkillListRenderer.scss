@@ -37,4 +37,18 @@
     color: var(--text-secondary-color);
     text-align: center;
   }
+
+  @media (max-width: 480px) {
+    max-width: 100px;
+    padding: 8px;
+
+    .itemIcon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .itemName {
+      font-size: 0.875rem;
+    }
+  }
 }

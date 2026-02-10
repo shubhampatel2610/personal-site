@@ -44,6 +44,24 @@
         font-weight: 400;
         color: var(--faded-text);
       }
+
+      @media (max-width: 768px) {
+        .headerText {
+          font-size: 1.5rem;
+        }
+        .subHeaderText {
+          font-size: 0.8rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .headerText {
+          font-size: 1.25rem;
+        }
+        .subHeaderText {
+          font-size: 0.75rem;
+        }
+      }
     }
 
     .bodySection {
@@ -67,6 +85,14 @@
         .contactText {
           color: var(--faded-text);
         }
+      }
+
+      @media (max-width: 768px) {
+        font-size: 0.8rem;
+      }
+
+      @media (max-width: 480px) {
+         font-size: 0.75rem;
       }
     }
 
@@ -97,6 +123,14 @@
       flex-direction: column;
       gap: 20px;
       background-color: var(--form-bg);
+
+      @media (max-width: 768px) {
+        padding: 20px;
+      }
+
+      @media (max-width: 480px) {
+        padding: 15px;
+      }
     }
   }
 }

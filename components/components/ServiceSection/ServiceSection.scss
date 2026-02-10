@@ -23,10 +23,25 @@
       font-size: 2rem;
       font-weight: bold;
       line-height: 1.25;
+
+      @media (max-width: 768px) {
+        width: 75%;
+        font-size: 1.5rem;
+      }
+
+      @media (max-width: 480px) {
+        width: 90%;
+        font-size: 1.25rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .serviceContainer {
+        gap: 10px;
+      }
     }
   }
 }
-
 
 // Service Cards Styling
 .serviceCardContainer {
@@ -56,5 +71,29 @@
 
   .descriptionContainer {
     font-size: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 10px;
+
+    .titleContainer {
+      font-size: 1.25rem;
+    }
+
+    .descriptionContainer {
+      font-size: 0.875rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 8px;
+
+    .titleContainer {
+      font-size: 1rem;
+    }
+
+    .descriptionContainer {
+      font-size: 0.75rem;
+    }
   }
 }
