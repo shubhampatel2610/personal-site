@@ -22,9 +22,14 @@ const HomeSection = observer(() => {
   };
 
   useEffect(() => {
-    const onResize = () => NavbarStore.setCurrentDevice(getDeviceType());
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
+    const updateDevice = () => {
+      NavbarStore.setCurrentDevice(getDeviceType());
+    };
+
+    updateDevice();
+
+    window.addEventListener("resize", updateDevice);
+    return () => window.removeEventListener("resize", updateDevice);
   }, []);
 
   return (
