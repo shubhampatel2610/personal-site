@@ -39,7 +39,7 @@ const DesktopNavbarComponent = observer(() => {
         <i className="pi pi-code" style={{ fontSize: "2rem" }}></i>
         <span className="navbarTitle">{AppConstants.USER_NAME}</span>
       </div>
-      {(NavbarStore.currentDevice === AppConstants.DESKTOP_DEVICE) ? (
+      {NavbarStore.currentDevice === AppConstants.DESKTOP_DEVICE ? (
         <div className="navlinkContainer">
           {AppConstants.NAVLINKS.map((link) => {
             const sectionId = link.url.replace("#", "");
@@ -69,14 +69,18 @@ const DesktopNavbarComponent = observer(() => {
           iconPos="right"
           onClick={handleDownloadClick}
         />
-        <div
-          className="menuIcon"
-          onClick={() => {
-            NavbarStore.showMobileMenu(true);
-          }}
-        >
-          <i className="pi pi-bars"></i>
-        </div>
+        {NavbarStore.currentDevice !== AppConstants.DESKTOP_DEVICE ? (
+          <div
+            className="menuIcon"
+            onClick={() => {
+              NavbarStore.showMobileMenu(true);
+            }}
+          >
+            <i className="pi pi-bars"></i>
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );
