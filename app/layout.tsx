@@ -21,6 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="google-site-verification" content="google86e7790571139462.html" />
+      </head>
       <body className={`${customFonts.className} antialiased layoutStyles`}>
         <PrimeReactProvider>
           <NavbarComponent />
