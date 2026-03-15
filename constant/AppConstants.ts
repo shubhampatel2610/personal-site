@@ -179,6 +179,54 @@ class AppConstants {
 
   // Education Section Constants
   static EDUCATION_HEADER = "Education";
+
+  static APP_METADATA = {
+    title: "Shubham Patel | Software Developer & Frontend Engineer in India",
+    description: "Shubham Patel is a skilled Frontend Developer specializing in React.js, Next.js, and TypeScript along with Test Driven Development folloing Agile methodology. Based in India, he builds high-performance, scalable, and AI-powered web applications with clean code and pixel-perfect designs. Explore his work, skills, and professional journey across Ahmedabad, Pune, Hyderabad, Delhi, Bengaluru, Noida, and Gandhinagar.",
+    keywords: [
+      "Shubham Patel",
+      "Frontend Developer India",
+      "React.js Developer",
+      "Next.js Developer",
+      "TypeScript Developer",
+      "Javascript Developer",
+      "Software Developer",
+      "Web Development India",
+      "Scalable Web Applications",
+      "AI-powered Web Apps",
+      "HTML5 CSS3 Sass",
+      "Redux MobX",
+      "Jest React Testing Library",
+      "VS Code Git GitHub Bitbucket Jira Figma Postman",
+      "Ahmedabad Pune Hyderabad Delhi Bengaluru Noida Gandhinagar",
+      "Portfolio",
+      "Freelance Developer",
+      "Personal Website"
+    ],
+    viewport: "width=device-width, initial-scale=1",
+    robots: "index, follow",
+    openGraph: {
+      title: "Shubham Patel | Frontend Developer & Web Engineer in India",
+      description: "Discover Shubham Patel's portfolio showcasing expertise in React.js, Next.js, TypeScript, and frontend development. Building scalable, AI-powered, and high-performance web applications across top Indian tech hubs including Ahmedabad, Pune, Hyderabad, Delhi, Bengaluru, Noida, and Gandhinagar.",
+      url: "https://shubham-patel-sde.vercel.app/",
+      type: "website",
+      images: [
+        {
+          url: "/siteImages/profile_picture.jpg",
+          width: 800,
+          height: 800,
+          alt: "Shubham Patel Profile Picture"
+        }
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Shubham Patel | Software Developer & Frontend Engineer in India",
+      description: "Hi! I'm Shubham Patel, a Frontend Developer passionate about creating high-performance, scalable, and AI-powered web experiences with React.js, Next.js, and TypeScript. Serving clients and projects across Ahmedabad, Pune, Hyderabad, Delhi, Bengaluru, Noida, and Gandhinagar.",
+      images: ["/siteImages/profile_picture.jpg"],
+      creator: "@shubhampatel2610"
+    }
+  }
 }
 
 export default AppConstants;

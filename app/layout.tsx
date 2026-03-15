@@ -5,17 +5,14 @@ import "./globals.css";
 import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
 import NavbarComponent from "@/components/components/NavbarComponent/NavbarComponent";
+import AppConstants from "@/constant/AppConstants";
 
 const customFonts = Inter({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Shubham's Space",
-  description:
-    "This is Shubham's personal website built with Next.js, Tailwind CSS, and PrimeReact.",
-};
+export const metadata: Metadata = AppConstants.APP_METADATA;
 
 export default function RootLayout({
   children,
