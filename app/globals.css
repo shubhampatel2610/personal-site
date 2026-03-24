@@ -1,37 +1,63 @@
 @import "tailwindcss";
+@import "primereact/resources/themes/lara-dark-blue/theme.css";
 
-@import "primereact/resources/themes/lara-light-cyan/theme.css";
-
+/* ─────────────────────────────────────────────
+   SMOOTH SCROLL + SCROLL MARGIN
+───────────────────────────────────────────── */
 html {
     scroll-behavior: smooth;
 }
 
-/* Add scroll margin to all elements with IDs to prevent navbar overlap */
 [id] {
     scroll-margin-top: 12vh;
 }
 
+/* ─────────────────────────────────────────────
+   DESIGN TOKENS
+───────────────────────────────────────────── */
 :root {
-    --site-bg: #0d0d1f;
-    --site-text: #ffffff;
-    --site-button-bg: #29297e;
-    --site-button-hover-bg: #3b3bbf;
-    --site-links-hover: #67e8f9;
+    /* Backgrounds */
+    --site-bg: #0a0a0a;
+    --surface-1: #111111;
+    --surface-2: #1a1a1a;
 
-    /* Scrollbar variables (hex + alpha variants) */
-    --scrollbar-thumb-hex: #ffffff;
-    --scrollbar-track-hex: #ffffff;
-    --scrollbar-thumb: #ffffff1f;
-    /* 12% alpha */
-    --scrollbar-thumb-hover: #ffffff2e;
-    /* 18% alpha */
-    --scrollbar-thumb-active: #ffffff38;
-    /* ~22% alpha */
-    --scrollbar-track: #ffffff05;
-    /* 2% alpha */
-    --scrollbar-focus: #ffffff14;
-    /* 8% alpha for focus ring */
-    --scrollbar-width: 12px;
+    /* Text */
+    --site-text: #ffffff;
+    --text-muted: #a1a1aa;
+    --text-faint: #71717a;
+
+    /* Accent */
+    --accent: #3B82F6;
+    --accent-hover: #2563EB;
+    --accent-pressed: #1D4ED8;
+    --accent-glow: rgba(59, 130, 246, 0.15);
+
+    /* Borders */
+    --border-subtle: rgba(255, 255, 255, 0.06);
+    --border-visible: rgba(255, 255, 255, 0.12);
+
+    /* Buttons (legacy — mapped to accent) */
+    --site-button-bg: #3B82F6;
+    --site-button-hover-bg: #2563EB;
+    --site-links-hover: #3B82F6;
+
+    /* Scrollbar */
+    --scrollbar-thumb: rgba(255, 255, 255, 0.12);
+    --scrollbar-thumb-hover: rgba(255, 255, 255, 0.18);
+    --scrollbar-thumb-active: rgba(255, 255, 255, 0.22);
+    --scrollbar-track: rgba(255, 255, 255, 0.02);
+    --scrollbar-width: 8px;
+}
+
+/* ─────────────────────────────────────────────
+   BASE LAYOUT
+───────────────────────────────────────────── */
+body {
+    background: var(--site-bg);
+    color: var(--site-text);
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .layoutStyles {
@@ -39,38 +65,9 @@ html {
     color: var(--site-text) !important;
 }
 
-.p-button {
-    border-radius: 0.5rem;
-    height: 44px !important;
-    background: var(--site-button-bg);
-    border: none;
-
-    .p-button-label,
-    .p-button-icon {
-        font-size: 1rem !important;
-        font-weight: 500 !important;
-    }
-
-    @media (max-width: 480px) {
-        width: revert-layer !important;
-        
-    }
-
-    &:hover {
-        background: var(--site-button-hover-bg);
-    }
-
-    &:focus {
-        box-shadow: none !important;
-    }
-}
-
-.p-card-body,
-.p-card-content {
-    padding: 0;
-}
-
-/* Custom scrollbar */
+/* ─────────────────────────────────────────────
+   CUSTOM SCROLLBAR
+───────────────────────────────────────────── */
 ::-webkit-scrollbar {
     width: var(--scrollbar-width);
     height: var(--scrollbar-width);
@@ -83,7 +80,7 @@ html {
 ::-webkit-scrollbar-thumb {
     background-color: var(--scrollbar-thumb);
     border-radius: 999px;
-    border: 3px solid transparent;
+    border: 2px solid transparent;
     background-clip: padding-box;
 }
 
@@ -104,23 +101,108 @@ html {
     scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
 
-.p-float-label {
-    width: 100% !important;
-    color: var(--site-text) !important;
+/* ─────────────────────────────────────────────
+   PRIMEREACT — BUTTON
+───────────────────────────────────────────── */
+.p-button {
+    height: 44px !important;
+    padding: 0 1.25rem !important;
+    border-radius: 0.5rem !important;
+    border: 1px solid var(--accent) !important;
+    background: rgba(59, 130, 246, 0.1) !important;
+    color: var(--accent) !important;
+    transition: all 0.2s ease !important;
 
-    label {
-        color: var(--site-text) !important;
+    .p-button-label,
+    .p-button-icon {
+        font-size: 0.875rem !important;
+        font-weight: 500 !important;
+        color: var(--accent) !important;
+    }
+
+    &:hover {
+        background: rgba(59, 130, 246, 0.2) !important;
+        border-color: var(--accent-hover) !important;
+        box-shadow: 0 0 16px var(--accent-glow) !important;
+    }
+
+    &:active {
+        background: rgba(59, 130, 246, 0.25) !important;
+        transform: scale(0.98);
+    }
+
+    &:focus {
+        box-shadow: none !important;
+        outline: none !important;
+    }
+
+    @media (max-width: 480px) {
+        width: revert-layer !important;
     }
 }
 
-.p-inputtextarea,
-.p-inputtext {
+/* ─────────────────────────────────────────────
+   PRIMEREACT — CARD
+───────────────────────────────────────────── */
+.p-card {
+    background: var(--surface-1) !important;
+    border: 1px solid var(--border-subtle) !important;
+    border-radius: 0.75rem !important;
+    box-shadow: none !important;
+    color: var(--site-text) !important;
+}
+
+.p-card-body,
+.p-card-content {
+    padding: 0 !important;
+}
+
+/* ─────────────────────────────────────────────
+   PRIMEREACT — INPUTS (InputText + Textarea)
+───────────────────────────────────────────── */
+.p-float-label {
     width: 100% !important;
-    background: transparent !important;
-    border: 1px solid var(--site-button-bg) !important;
+
+    label {
+        color: var(--text-muted) !important;
+        font-size: 0.875rem !important;
+        transition: all 0.2s ease !important;
+    }
+
+    /* Lifted label */
+    &:has(input:focus) label,
+    &:has(input:not(:placeholder-shown)) label,
+    &:has(textarea:focus) label,
+    &:has(textarea:not(:placeholder-shown)) label {
+        color: var(--accent) !important;
+    }
+}
+
+.p-inputtext,
+.p-inputtextarea {
+    width: 100% !important;
+    background: var(--surface-2) !important;
+    border: 1px solid var(--border-visible) !important;
     color: var(--site-text) !important;
     border-radius: 0.5rem !important;
-    padding: 0.5rem !important;
+    padding: 0.625rem 0.75rem !important;
+    font-size: 0.875rem !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+
+    &::placeholder {
+        color: var(--text-faint) !important;
+    }
+
+    &:hover {
+        border-color: var(--border-visible) !important;
+    }
+
+    &:focus {
+        border-color: var(--accent) !important;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+        outline: none !important;
+        background: var(--surface-1) !important;
+    }
 
     @media (max-width: 768px) {
         font-size: 1rem !important;
@@ -129,9 +211,68 @@ html {
     @media (max-width: 480px) {
         font-size: 0.875rem !important;
     }
+}
 
-    &:focus {
-        border-color: var(--site-links-hover) !important;
-        box-shadow: none !important;
+/* ─────────────────────────────────────────────
+   PRIMEREACT — NAVBAR / IMAGE overrides
+───────────────────────────────────────────── */
+.p-image img {
+    display: block;
+}
+
+/* ─────────────────────────────────────────────
+   KEYFRAMES (single source of truth)
+───────────────────────────────────────────── */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scrollRight {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
     }
 }

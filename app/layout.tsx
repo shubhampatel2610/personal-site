@@ -12,7 +12,7 @@ const customFonts = Inter({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = AppConstants.APP_METADATA;
+// export const metadata: Metadata = AppConstants.APP_METADATA;
 
 export default function RootLayout({
   children,

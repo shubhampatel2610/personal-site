@@ -1,5 +1,4 @@
-import { Card } from "primereact/card";
-import "./ExperienceSection.scss";
+// ExperienceCard.tsx
 import { useEffect, useState } from "react";
 import AppConstants from "@/constant/AppConstants";
 
@@ -12,78 +11,108 @@ interface ExperienceCardProps {
     duration: string;
     description: string[];
   };
+  index?: number;
 }
 
-interface HeaderTemplateProps {
-  companyName: string;
-  duration: string;
-}
-
-const HeaderTemplate = (props: HeaderTemplateProps) => {
-  return (
-    <div className="cardHeader">
-      <div className="companyName">{props.companyName}</div>
-      <div className="duration">{props.duration}</div>
-    </div>
-  );
-};
-
-const ExperienceCard = (props: ExperienceCardProps) => {
-  const companyName = props.experienceDetails.company;
-  const duration = props.experienceDetails.duration;
-  const role = props.experienceDetails.role;
-  const description = props.experienceDetails.description;
-  const location = props.experienceDetails.location;
+const ExperienceCard = ({ experienceDetails, index = 0 }: ExperienceCardProps) => {
+  const { company, duration, role, description, location } = experienceDetails;
 
   const [showFullDescription, setShowFullDescription] = useState(false);
   const [descriptionToShow, setDescriptionToShow] = useState<string[]>([]);
 
+  // ✅ Store logic untouched
   useEffect(() => {
     if (showFullDescription || description.length <= 2) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
       setDescriptionToShow(description);
     } else {
       setDescriptionToShow(description.slice(0, 2));
     }
   }, [showFullDescription, description]);
+
   return (
-    <div className="experienceCardContainer">
-      <Card
-        className="experienceCard"
-        header={
-          <HeaderTemplate companyName={companyName} duration={duration} />
-        }
+    <div
+      style={{ animationDelay: `${index * 120}ms` }}
+      className="relative pl-8 md:pl-10 pb-5 animate-[fadeSlideUp_0.5s_ease_both]"
+    >
+      {/* Timeline dot */}
+      <div className="absolute left-0 top-[6px] flex items-center justify-center
+        w-[16px] h-[16px] md:w-[24px] md:h-[24px] rounded-full
+        bg-[#0a0a0a] border-2 border-[#3B82F6]
+        shadow-[0_0_10px_rgba(59,130,246,0.4)]"
       >
-        <div className="cardContent">
-          <div className="headerContainer">
-            {/* <label className="cardLabel">Role: </label> */}
-            <label className="roleText">{role}</label>
-            <label className="locationText">
-              <i className="pi pi-map-marker" /> {location}
-            </label>
-          </div>
-          <div className="descriptionContainer">
-            {/* <label className="cardLabel">Experience: </label> */}
-            <ul>
-              {descriptionToShow.map((desc, index) => (
-                <li key={index} className="descriptionText">
-                  {desc}
-                </li>
-              ))}
-            </ul>
-            {description.length > 2 && (
-              <div
-                className="showHyperText"
-                onClick={() => setShowFullDescription(!showFullDescription)}
-              >
-                {showFullDescription
-                  ? AppConstants.SHOW_LESS_TEXT
-                  : AppConstants.SHOW_MORE_TEXT}
-              </div>
-            )}
-          </div>
+        <span className="w-[6px] h-[6px] md:w-[8px] md:h-[8px] rounded-full bg-[#3B82F6]" />
+      </div>
+
+      {/* Card */}
+      <div className="group relative flex flex-col gap-2 p-3 md:p-4 rounded-xl
+        bg-[#111111] border border-white/[0.06]
+        hover:border-[#3B82F6]/30
+        hover:shadow-[0_0_30px_rgba(59,130,246,0.07)]
+        transition-all duration-300 ease-in-out"
+      >
+        {/* Top accent line */}
+        <span className="absolute top-0 left-8 right-8 h-[1px] rounded-full
+          bg-gradient-to-r from-transparent via-[#3B82F6]/50 to-transparent
+          opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+        {/* Card Header — company + duration */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <h3 className="text-white font-bold text-lg md:text-xl tracking-tight">
+            {company}
+          </h3>
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full
+            bg-[#3B82F6]/10 border border-[#3B82F6]/20
+            text-[#3B82F6] text-xs font-medium whitespace-nowrap self-start sm:self-auto"
+          >
+            <i className="pi pi-calendar text-[10px]" />
+            {duration}
+          </span>
         </div>
-      </Card>
+
+        {/* Role + Location */}
+        <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 justify-between">
+          <span className="flex items-center gap-1.5 text-white/80 text-sm font-medium">
+            <i className="pi pi-briefcase text-[#3B82F6] text-xs" />
+            {role}
+          </span>
+          <span className="flex items-center gap-1.5 text-[#71717a] text-sm">
+            <i className="pi pi-map-marker text-[#71717a] text-xs" />
+            {location}
+          </span>
+        </div>
+
+        {/* Divider */}
+        <div className="w-full h-[1px] bg-white/[0.06]" />
+
+        {/* Description */}
+        <ul className="flex flex-col gap-2 list-none m-0 p-0">
+          {descriptionToShow.map((desc, i) => (
+            <li
+              key={i}
+              className="flex items-start gap-2.5 text-[#a1a1aa] text-sm leading-relaxed"
+            >
+              <span className="mt-[6px] w-1.5 h-1.5 rounded-full bg-[#3B82F6]/50 shrink-0" />
+              {desc}
+            </li>
+          ))}
+        </ul>
+
+        {/* Show more / less */}
+        {description.length > 2 && (
+          <button
+            onClick={() => setShowFullDescription(!showFullDescription)}
+            className="self-start inline-flex items-center gap-1.5
+              text-[#3B82F6] text-xs font-medium
+              hover:text-white transition-colors duration-200 cursor-pointer
+              bg-transparent border-none p-0"
+          >
+            <i className={`pi ${showFullDescription ? "pi-chevron-up" : "pi-chevron-down"} text-[10px]`} />
+            {showFullDescription
+              ? AppConstants.SHOW_LESS_TEXT
+              : AppConstants.SHOW_MORE_TEXT}
+          </button>
+        )}
+      </div>
     </div>
   );
 };
