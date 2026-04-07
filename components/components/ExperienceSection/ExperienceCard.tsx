@@ -32,7 +32,7 @@ const ExperienceCard = ({ experienceDetails, index = 0 }: ExperienceCardProps) =
   return (
     <div
       style={{ animationDelay: `${index * 120}ms` }}
-      className="relative pl-8 md:pl-10 pb-5 animate-[fadeSlideUp_0.5s_ease_both]"
+      className="relative pl-5 md:pl-10 pb-5 animate-[fadeSlideUp_0.5s_ease_both]"
     >
       {/* Timeline dot */}
       <div className="absolute left-0 top-[6px] flex items-center justify-center

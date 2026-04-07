@@ -19,7 +19,7 @@ const MainSection = observer(() => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center gap-5 px-6 text-center">
+      <div className="relative z-10 flex flex-col items-center justify-center gap-3 md:gap-5 p-3 md:px-6 text-center">
 
         {/* Profile Picture */}
         <div className="group relative">
@@ -74,7 +74,7 @@ const MainSection = observer(() => {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-[fadeSlideUp_0.6s_ease_0.6s_both]">
-          <span className="text-[#71717a] text-xs tracking-[0.2em] uppercase">Scroll</span>
+          {/* <span className="text-[#71717a] text-xs tracking-[0.2em] uppercase">Scroll</span> */}
           <div className="w-[1px] h-8 bg-gradient-to-b from-[#3B82F6]/60 to-transparent animate-pulse" />
         </div>
 

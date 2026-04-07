@@ -24,7 +24,7 @@ const DesktopNavbarComponent = observer(() => {
   return (
     <nav
       className={`
-        w-full px-6 md:px-10 lg:px-16 h-16 flex items-center justify-between
+        w-full px-2 md:px-10 lg:px-16 h-16 flex items-center justify-between
         transition-all duration-300 ease-in-out
         ${NavbarStore.navbgColor
           ? "bg-[#0a0a0a]/95 shadow-[0_1px_40px_rgba(0,0,0,0.6)]"
@@ -90,7 +90,7 @@ const DesktopNavbarComponent = observer(() => {
           target="_blank"
           rel="noopener noreferrer"
           className={`
-            inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium
+            inline-flex items-center gap-2 p-3 md:px-4 md:py-2 rounded-lg text-sm font-medium
             border border-[#3B82F6]/30 text-[#3B82F6]
             bg-[#3B82F6]/5 hover:bg-[#3B82F6]/15 hover:border-[#3B82F6]/60
             transition-all duration-200 ease-in-out
@@ -100,7 +100,7 @@ const DesktopNavbarComponent = observer(() => {
         >
           <i className="pi pi-download text-xs" />
           {!isMobile && (
-            <span>{AppConstants.DOWNLOAD_BUTTON_LABEL}</span>
+            <span className="w-max">{AppConstants.DOWNLOAD_BUTTON_LABEL}</span>
           )}
         </a>
 
@@ -110,7 +110,7 @@ const DesktopNavbarComponent = observer(() => {
             onClick={() => NavbarStore.showMobileMenu(true)}
             aria-label="Open menu"
             className="
-              flex items-center justify-center w-9 h-9 rounded-lg
+              flex items-center justify-center p-3 rounded-lg
               border border-white/[0.08] bg-white/[0.04]
               hover:bg-white/[0.08] hover:border-white/[0.15]
               text-[#a1a1aa] hover:text-white

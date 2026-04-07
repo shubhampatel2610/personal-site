@@ -49,14 +49,14 @@ const ServiceCard = ({ id, title, description, iconPath, index = 0 }: ServiceCar
         </div>
 
         {/* Bottom arrow — slides in on hover */}
-        <div className="flex items-center gap-1.5 text-[#3B82F6]
+        {/* <div className="flex items-center gap-1.5 text-[#3B82F6]
           opacity-0 group-hover:opacity-70
           -translate-x-1 group-hover:translate-x-0
           transition-all duration-300 pt-1"
         >
           <span className="text-xs font-medium tracking-wide">Learn more</span>
           <i className="pi pi-arrow-right text-xs" />
-        </div>
+        </div> */}
       </div>
     </div>
   );
