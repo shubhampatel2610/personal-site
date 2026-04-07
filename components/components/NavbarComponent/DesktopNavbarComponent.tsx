@@ -37,8 +37,8 @@ const DesktopNavbarComponent = observer(() => {
         href="/"
         className="flex items-center gap-2.5 group select-none"
       >
-        <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#3B82F6]/10 border border-[#3B82F6]/20 group-hover:bg-[#3B82F6]/20 group-hover:border-[#3B82F6]/40 transition-all duration-300">
-          <i className="pi pi-code text-[#3B82F6] text-sm" />
+        <span className="flex items-center justify-center p-2 rounded-lg bg-[#3B82F6]/10 border border-[#3B82F6]/20 group-hover:bg-[#3B82F6]/20 group-hover:border-[#3B82F6]/40 transition-all duration-300">
+          <i className="pi pi-code text-[#3B82F6] text-xl" />
         </span>
         <span className="text-white font-semibold text-base tracking-tight group-hover:text-[#3B82F6] transition-colors duration-300">
           {AppConstants.USER_NAME}
