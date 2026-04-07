@@ -6,7 +6,7 @@ import ParticleBackground from "@/components/common/ParticleBackground";
 
 const MainSection = observer(() => {
   return (
-    <section className="relative min-h-screen w-full pt-20 flex items-center justify-center overflow-hidden bg-[#0a0a0a]">
+    <section className="relative min-h-screen w-full pt-5 flex items-center justify-center overflow-hidden bg-[#0a0a0a]">
 
       {/* Particle Background */}
       <div className="absolute inset-0 z-0 pointer-events-none">
