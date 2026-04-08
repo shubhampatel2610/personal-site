@@ -28,10 +28,10 @@ const SkillSection = () => {
         </div>
 
         {/* Skills + Tools blocks */}
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-5">
 
           {/* Skills */}
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-3">
             <div className="flex items-center gap-4 px-1">
               <span className="text-white font-semibold text-base tracking-tight shrink-0">
                 {AppConstants.SKILLS_HEADER}
@@ -45,7 +45,7 @@ const SkillSection = () => {
           </div>
 
           {/* Tools */}
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-3">
             <div className="flex items-center gap-4 px-1">
               <span className="text-white font-semibold text-base tracking-tight shrink-0">
                 {AppConstants.TOOLS_HEADER}

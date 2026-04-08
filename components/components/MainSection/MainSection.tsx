@@ -19,7 +19,7 @@ const MainSection = observer(() => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center gap-3 md:gap-5 p-3 md:px-6 text-center">
+      <div className="relative z-10 flex flex-col items-center justify-center gap-5 p-3 md:px-6 text-center">
 
         {/* Profile Picture */}
         <div className="group relative">
