@@ -12,11 +12,11 @@ const IntellijIcon = () => {
             y2="56.78"
             gradientTransform="rotate(.104) scale(1.21905)"
           >
-            <stop offset=".09" stop-color="#fc801d" />
-            <stop offset=".23" stop-color="#b07f61" />
-            <stop offset=".41" stop-color="#577db3" />
-            <stop offset=".53" stop-color="#1e7ce6" />
-            <stop offset=".59" stop-color="#087cfa" />
+            <stop offset=".09" stopColor="#fc801d" />
+            <stop offset=".23" stopColor="#b07f61" />
+            <stop offset=".41" stopColor="#577db3" />
+            <stop offset=".53" stopColor="#1e7ce6" />
+            <stop offset=".59" stopColor="#087cfa" />
           </linearGradient>
           <linearGradient
             id="b"
@@ -27,16 +27,16 @@ const IntellijIcon = () => {
             y2="6.52"
             gradientTransform="rotate(.104) scale(1.21905)"
           >
-            <stop offset="0" stop-color="#fe2857" />
-            <stop offset=".08" stop-color="#cb3979" />
-            <stop offset=".16" stop-color="#9e4997" />
-            <stop offset=".25" stop-color="#7557b2" />
-            <stop offset=".34" stop-color="#5362c8" />
-            <stop offset=".44" stop-color="#386cda" />
-            <stop offset=".54" stop-color="#2373e8" />
-            <stop offset=".66" stop-color="#1478f2" />
-            <stop offset=".79" stop-color="#0b7bf8" />
-            <stop offset="1" stop-color="#087cfa" />
+            <stop offset="0" stopColor="#fe2857" />
+            <stop offset=".08" stopColor="#cb3979" />
+            <stop offset=".16" stopColor="#9e4997" />
+            <stop offset=".25" stopColor="#7557b2" />
+            <stop offset=".34" stopColor="#5362c8" />
+            <stop offset=".44" stopColor="#386cda" />
+            <stop offset=".54" stopColor="#2373e8" />
+            <stop offset=".66" stopColor="#1478f2" />
+            <stop offset=".79" stopColor="#0b7bf8" />
+            <stop offset="1" stopColor="#087cfa" />
           </linearGradient>
           <linearGradient
             id="c"
@@ -47,14 +47,14 @@ const IntellijIcon = () => {
             y2="125.99"
             gradientTransform="rotate(.104) scale(1.21905)"
           >
-            <stop offset="0" stop-color="#fe2857" />
-            <stop offset=".08" stop-color="#fe295f" />
-            <stop offset=".21" stop-color="#ff2d76" />
-            <stop offset=".3" stop-color="#ff318c" />
-            <stop offset=".38" stop-color="#ea3896" />
-            <stop offset=".55" stop-color="#b248ae" />
-            <stop offset=".79" stop-color="#5a63d6" />
-            <stop offset="1" stop-color="#087cfa" />
+            <stop offset="0" stopColor="#fe2857" />
+            <stop offset=".08" stopColor="#fe295f" />
+            <stop offset=".21" stopColor="#ff2d76" />
+            <stop offset=".3" stopColor="#ff318c" />
+            <stop offset=".38" stopColor="#ea3896" />
+            <stop offset=".55" stopColor="#b248ae" />
+            <stop offset=".79" stopColor="#5a63d6" />
+            <stop offset="1" stopColor="#087cfa" />
           </linearGradient>
         </defs>
         <path
