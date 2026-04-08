@@ -1,4 +1,3 @@
-// SkillListRenderer.tsx
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
@@ -7,63 +6,74 @@ interface SkillListRendererProps {
   direction?: "left" | "right";
 }
 
+const SkillPill = ({ item }: { item: any }) => (
+  <div
+    className={[
+      "flex flex-col items-center justify-center",
+      "w-[90px] h-[90px] shrink-0 rounded-xl p-2",
+      "bg-[var(--surface-2)] border border-[var(--border-subtle)]",
+      "hover:border-[var(--accent)] hover:bg-[var(--accent-10)]",
+      "hover:shadow-[0_0_20px_var(--accent-15)]",
+      "hover:-translate-y-1",
+      "transition-all duration-200 cursor-default select-none",
+    ].join(" ")}
+  >
+    {/* Icon */}
+    {item.component && (
+      <div className="w-full h-full flex items-center justify-center shrink-0 overflow-hidden p-1">
+        <item.component />
+      </div>
+    )}
+
+    {/* Name */}
+    <span className="text-[var(--text-muted)] text-[12px] font-medium text-center leading-tight w-full break-words hyphens-auto mb-1">
+      {item.name}
+    </span>
+  </div>
+);
+
 const SkillListRenderer = ({
   itemList,
   direction = "left",
 }: SkillListRendererProps) => {
   if (!itemList || itemList.length === 0) return null;
 
-  // Duplicate list for seamless infinite loop
+  // Triple duplicate for seamless loop
   const duplicated = [...itemList, ...itemList, ...itemList];
 
   return (
-    <div className="relative w-full overflow-hidden group">
+    <div className="relative w-full overflow-hidden py-3 group">
 
-      {/* Left fade edge */}
-      <div className="absolute left-0 top-0 bottom-0 w-16 md:w-24 z-10
-        bg-gradient-to-r from-[#0a0a0a] to-transparent pointer-events-none" />
-
-      {/* Right fade edge */}
-      <div className="absolute right-0 top-0 bottom-0 w-16 md:w-24 z-10
-        bg-gradient-to-l from-[#0a0a0a] to-transparent pointer-events-none" />
-
-      {/* Scrolling track */}
+      {/* Left fade — uses inline style for CSS var support in gradient */}
       <div
-        className={`
-          flex gap-3 w-max
-          ${direction === "left"
-            ? "animate-[scrollLeft_30s_linear_infinite]"
-            : "animate-[scrollRight_30s_linear_infinite]"
-          }
-          group-hover:[animation-play-state:paused]
-        `}
+        className="absolute left-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
+        style={{ background: "linear-gradient(to right, var(--site-bg) 0%, transparent 100%)" }}
+      />
+
+      {/* Right fade */}
+      <div
+        className="absolute right-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
+        style={{ background: "linear-gradient(to left, var(--site-bg) 0%, transparent 100%)" }}
+      />
+
+      {/* Scroll track */}
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "12px",
+          width: "max-content",
+          willChange: "transform",
+          animation: `${direction === "left" ? "scrollLeft" : "scrollRight"} 40s linear infinite`,
+        }}
+        // Pause on hover via className
+        className="group-hover:[animation-play-state:paused]"
       >
         {duplicated.map((item, i) => (
-          <div
-            key={i}
-            className="flex items-center gap-2 p-2 rounded-lg
-              bg-[#111111] border border-white/[0.06]
-              hover:border-[#3B82F6]/30 hover:bg-[#3B82F6]/5
-              hover:shadow-[0_0_16px_rgba(59,130,246,0.08)]
-              transition-all duration-200 ease-in-out
-              cursor-default select-none shrink-0"
-          >
-            {/* SVG icon component */}
-            {item.component && (
-              <span className="w-5 h-5 flex items-center justify-center shrink-0
-                text-[#a1a1aa] group-hover:text-white transition-colors duration-200"
-              >
-                <item.component />
-              </span>
-            )}
-            <span className="text-[#a1a1aa] text-sm font-medium
-              group-hover:text-white transition-colors duration-200 whitespace-nowrap"
-            >
-              {item.name}
-            </span>
-          </div>
+          <SkillPill key={i} item={item} />
         ))}
       </div>
+
     </div>
   );
 };
