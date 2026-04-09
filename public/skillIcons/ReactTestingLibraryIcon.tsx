@@ -18,13 +18,13 @@ const ReactTestingLibraryIcon = () => {
             gradientTransform="translate(0.502790,0.498469),scale(1.000000,0.992517),translate(-0.502790,-0.498469)"
             id="radialGradient-1"
           >
-            <stop stop-color="#E33332" offset="0%"></stop>
-            <stop stop-color="#E03330" offset="20%"></stop>
-            <stop stop-color="#D52E2C" offset="38%"></stop>
-            <stop stop-color="#C32827" offset="54%"></stop>
-            <stop stop-color="#A91F23" offset="71%"></stop>
-            <stop stop-color="#89181A" offset="86%"></stop>
-            <stop stop-color="#640E0E" offset="100%"></stop>
+            <stop stopColor="#E33332" offset="0%"></stop>
+            <stop stopColor="#E03330" offset="20%"></stop>
+            <stop stopColor="#D52E2C" offset="38%"></stop>
+            <stop stopColor="#C32827" offset="54%"></stop>
+            <stop stopColor="#A91F23" offset="71%"></stop>
+            <stop stopColor="#89181A" offset="86%"></stop>
+            <stop stopColor="#640E0E" offset="100%"></stop>
           </radialGradient>
           <linearGradient
             x1="0.003%"
@@ -33,13 +33,13 @@ const ReactTestingLibraryIcon = () => {
             y2="49.969%"
             id="linearGradient-2"
           >
-            <stop stop-color="#F7B3C5" offset="0%"></stop>
-            <stop stop-color="#F7B0C2" offset="19%"></stop>
-            <stop stop-color="#F6A4B6" offset="38%"></stop>
-            <stop stop-color="#F390A5" offset="58%"></stop>
-            <stop stop-color="#E7728B" offset="79%"></stop>
-            <stop stop-color="#DC4D6C" offset="99%"></stop>
-            <stop stop-color="#DA4B6A" offset="100%"></stop>
+            <stop stopColor="#F7B3C5" offset="0%"></stop>
+            <stop stopColor="#F7B0C2" offset="19%"></stop>
+            <stop stopColor="#F6A4B6" offset="38%"></stop>
+            <stop stopColor="#F390A5" offset="58%"></stop>
+            <stop stopColor="#E7728B" offset="79%"></stop>
+            <stop stopColor="#DC4D6C" offset="99%"></stop>
+            <stop stopColor="#DA4B6A" offset="100%"></stop>
           </linearGradient>
           <linearGradient
             x1="0.025%"
@@ -48,13 +48,13 @@ const ReactTestingLibraryIcon = () => {
             y2="26.463%"
             id="linearGradient-3"
           >
-            <stop stop-color="#F7B3C5" offset="0%"></stop>
-            <stop stop-color="#F7B0C2" offset="19%"></stop>
-            <stop stop-color="#F6A4B6" offset="38%"></stop>
-            <stop stop-color="#F390A5" offset="58%"></stop>
-            <stop stop-color="#E7728B" offset="79%"></stop>
-            <stop stop-color="#DC4D6C" offset="99%"></stop>
-            <stop stop-color="#DA4B6A" offset="100%"></stop>
+            <stop stopColor="#F7B3C5" offset="0%"></stop>
+            <stop stopColor="#F7B0C2" offset="19%"></stop>
+            <stop stopColor="#F6A4B6" offset="38%"></stop>
+            <stop stopColor="#F390A5" offset="58%"></stop>
+            <stop stopColor="#E7728B" offset="79%"></stop>
+            <stop stopColor="#DC4D6C" offset="99%"></stop>
+            <stop stopColor="#DA4B6A" offset="100%"></stop>
           </linearGradient>
           <radialGradient
             cx="50.879%"
@@ -65,13 +65,13 @@ const ReactTestingLibraryIcon = () => {
             gradientTransform="translate(0.508790,0.495849),scale(1.000000,0.419379),translate(-0.508790,-0.495849)"
             id="radialGradient-4"
           >
-            <stop stop-color="#F7B3C5" offset="0%"></stop>
-            <stop stop-color="#F7B0C2" offset="19%"></stop>
-            <stop stop-color="#F6A4B6" offset="38%"></stop>
-            <stop stop-color="#F390A5" offset="58%"></stop>
-            <stop stop-color="#E7728B" offset="79%"></stop>
-            <stop stop-color="#DC4D6C" offset="99%"></stop>
-            <stop stop-color="#DA4B6A" offset="100%"></stop>
+            <stop stopColor="#F7B3C5" offset="0%"></stop>
+            <stop stopColor="#F7B0C2" offset="19%"></stop>
+            <stop stopColor="#F6A4B6" offset="38%"></stop>
+            <stop stopColor="#F390A5" offset="58%"></stop>
+            <stop stopColor="#E7728B" offset="79%"></stop>
+            <stop stopColor="#DC4D6C" offset="99%"></stop>
+            <stop stopColor="#DA4B6A" offset="100%"></stop>
           </radialGradient>
           <radialGradient
             cx="50.5432107%"
@@ -82,13 +82,13 @@ const ReactTestingLibraryIcon = () => {
             gradientTransform="translate(0.505432,0.497420),scale(0.815587,1.000000),translate(-0.505432,-0.497420)"
             id="radialGradient-5"
           >
-            <stop stop-color="#F7B3C5" offset="0%"></stop>
-            <stop stop-color="#F7B0C2" offset="19%"></stop>
-            <stop stop-color="#F6A4B6" offset="38%"></stop>
-            <stop stop-color="#F390A5" offset="58%"></stop>
-            <stop stop-color="#E7728B" offset="79%"></stop>
-            <stop stop-color="#DC4D6C" offset="99%"></stop>
-            <stop stop-color="#DA4B6A" offset="100%"></stop>
+            <stop stopColor="#F7B3C5" offset="0%"></stop>
+            <stop stopColor="#F7B0C2" offset="19%"></stop>
+            <stop stopColor="#F6A4B6" offset="38%"></stop>
+            <stop stopColor="#F390A5" offset="58%"></stop>
+            <stop stopColor="#E7728B" offset="79%"></stop>
+            <stop stopColor="#DC4D6C" offset="99%"></stop>
+            <stop stopColor="#DA4B6A" offset="100%"></stop>
           </radialGradient>
           <linearGradient
             x1="0%"
@@ -97,13 +97,13 @@ const ReactTestingLibraryIcon = () => {
             y2="49.997%"
             id="linearGradient-6"
           >
-            <stop stop-color="#DA4B6A" offset="0%"></stop>
-            <stop stop-color="#DC4D6C" offset="1%"></stop>
-            <stop stop-color="#E7728B" offset="21%"></stop>
-            <stop stop-color="#F390A5" offset="42%"></stop>
-            <stop stop-color="#F6A4B6" offset="62%"></stop>
-            <stop stop-color="#F7B0C2" offset="81%"></stop>
-            <stop stop-color="#F7B3C5" offset="100%"></stop>
+            <stop stopColor="#DA4B6A" offset="0%"></stop>
+            <stop stopColor="#DC4D6C" offset="1%"></stop>
+            <stop stopColor="#E7728B" offset="21%"></stop>
+            <stop stopColor="#F390A5" offset="42%"></stop>
+            <stop stopColor="#F6A4B6" offset="62%"></stop>
+            <stop stopColor="#F7B0C2" offset="81%"></stop>
+            <stop stopColor="#F7B3C5" offset="100%"></stop>
           </linearGradient>
           <linearGradient
             x1="-0.004%"
@@ -112,13 +112,13 @@ const ReactTestingLibraryIcon = () => {
             y2="26.478%"
             id="linearGradient-7"
           >
-            <stop stop-color="#DA4B6A" offset="0%"></stop>
-            <stop stop-color="#DC4D6C" offset="1%"></stop>
-            <stop stop-color="#E7728B" offset="21%"></stop>
-            <stop stop-color="#F390A5" offset="42%"></stop>
-            <stop stop-color="#F6A4B6" offset="62%"></stop>
-            <stop stop-color="#F7B0C2" offset="81%"></stop>
-            <stop stop-color="#F7B3C5" offset="100%"></stop>
+            <stop stopColor="#DA4B6A" offset="0%"></stop>
+            <stop stopColor="#DC4D6C" offset="1%"></stop>
+            <stop stopColor="#E7728B" offset="21%"></stop>
+            <stop stopColor="#F390A5" offset="42%"></stop>
+            <stop stopColor="#F6A4B6" offset="62%"></stop>
+            <stop stopColor="#F7B0C2" offset="81%"></stop>
+            <stop stopColor="#F7B3C5" offset="100%"></stop>
           </linearGradient>
           <radialGradient
             cx="51.992%"
@@ -129,13 +129,13 @@ const ReactTestingLibraryIcon = () => {
             gradientTransform="translate(0.519920,0.495818),scale(1.000000,0.419250),translate(-0.519920,-0.495818)"
             id="radialGradient-8"
           >
-            <stop stop-color="#F7B3C5" offset="0%"></stop>
-            <stop stop-color="#F7B0C2" offset="19%"></stop>
-            <stop stop-color="#F6A4B6" offset="38%"></stop>
-            <stop stop-color="#F390A5" offset="58%"></stop>
-            <stop stop-color="#E7728B" offset="79%"></stop>
-            <stop stop-color="#DC4D6C" offset="99%"></stop>
-            <stop stop-color="#DA4B6A" offset="100%"></stop>
+            <stop stopColor="#F7B3C5" offset="0%"></stop>
+            <stop stopColor="#F7B0C2" offset="19%"></stop>
+            <stop stopColor="#F6A4B6" offset="38%"></stop>
+            <stop stopColor="#F390A5" offset="58%"></stop>
+            <stop stopColor="#E7728B" offset="79%"></stop>
+            <stop stopColor="#DC4D6C" offset="99%"></stop>
+            <stop stopColor="#DA4B6A" offset="100%"></stop>
           </radialGradient>
         </defs>
         <g>
