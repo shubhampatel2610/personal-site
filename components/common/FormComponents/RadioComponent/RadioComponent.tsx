@@ -14,16 +14,13 @@ const RadioComponent = (props: RadioComponentProps) => {
   const { id, name, value, label, onChange, selectedValue } = props;
   const isChecked: boolean = selectedValue ? selectedValue === value : false;
 
+  const wrapperClasses = "flex align-items-center";
+  const labelClasses = "ml-2";
+
   return (
-    <div className="flex align-items-center">
-      <RadioButton
-        inputId={id}
-        name={name}
-        value={value}
-        onChange={(e) => onChange(e)}
-        checked={isChecked}
-      />
-      <label htmlFor={id} className="ml-2">
+    <div className={wrapperClasses}>
+      <RadioButton inputId={id} name={name} value={value} onChange={(e) => onChange(e)} checked={isChecked} />
+      <label htmlFor={id} className={labelClasses}>
         {label}
       </label>
     </div>

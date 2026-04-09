@@ -11,15 +11,11 @@ const InputTextComponent = (props: InputTextComponentProps) => {
   const { value, onChange, label } = props;
   const id = label?.toLowerCase()?.replace(" ", "-");
 
+  const wrapperClasses = "flex align-items-center";
+
   return (
-    <div className="flex align-items-center">
-      <InputText
-        id={id}
-        value={value}
-        onChange={(e) => onChange(e)}
-        maxLength={100}
-        placeholder={label}
-      />
+    <div className={wrapperClasses}>
+      <InputText id={id} value={value} onChange={(e) => onChange(e)} maxLength={100} placeholder={label} />
     </div>
   );
 };
