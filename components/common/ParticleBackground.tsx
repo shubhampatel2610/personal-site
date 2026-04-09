@@ -38,39 +38,75 @@ const ParticleBackground = () => {
         events: {
           onClick: { enable: true, mode: "push" },
           onHover: { enable: true, mode: "repulse" },
+          resize: { enable: true },
         },
         modes: {
-          push: { quantity: 2 },
-          repulse: { distance: 100, duration: 0.4 },
+          push: { quantity: 5 },
+          grab: { distance: 180, links: { opacity: 0.5 } },
+          repulse: { distance: 120, duration: 0.4 },
         },
       },
       particles: {
-        color: { value: "#ffffff" },
+        color: { value: ["#38bdf8", "#6366f1", "#a78bfa", "#f472b6"] },
         links: {
-          color: "#ffffff",
-          distance: 150,
+          color: { value: ["#60a5fa", "#8b5cf6", "#a78bfa", "#38bdf8"] },
+          distance: 160,
           enable: true,
-          opacity: 0.4,
+          opacity: 0.35,
           width: 1,
         },
         move: {
           direction: MoveDirection.none,
           enable: true,
           outModes: { default: OutMode.out },
-          speed: 2,
+          speed: 1.2,
         },
         number: {
-          density: { enable: true, area: 800 },
-          value: 60,
+          density: { enable: true, area: 900 },
+          value: 55,
         },
-        opacity: { value: 0.5 },
-        shape: { type: "circle" },
-        size: { value: { min: 1, max: 4 } },
+        opacity: {
+          value: 0.75,
+          random: { enable: true, minimumValue: 0.35 },
+          animation: {
+            enable: true,
+            speed: 0.8,
+            minimumValue: 0.5,
+            sync: false,
+          },
+        },
+        shape: {
+          type: ["circle", "star", "polygon", "square", "triangle"],
+          options: {
+            star: { sides: 5 },
+            polygon: { sides: 6 },
+            square: { sides: 4 },
+            triangle: { sides: 3 },
+          },
+        },
+        size: {
+          value: { min: 1.5, max: 4.5 },
+          animation: {
+            enable: true,
+            speed: 3,
+            minimumValue: 1.2,
+            sync: false,
+          },
+        },
+        twinkle: {
+          particles: {
+            enable: true,
+            frequency: 0.02,
+            opacity: 0.7,
+          },
+        },
       },
       detectRetina: true,
     }),
     []
   );
+
+  const particleClasses = "absolute inset-0";
 
   if (!init) return null;
 
@@ -79,7 +115,7 @@ const ParticleBackground = () => {
       id="tsparticles"
       particlesLoaded={particlesLoaded}
       options={options}
-      className="absolute inset-0 "
+      className={particleClasses}
     />
   );
 };
