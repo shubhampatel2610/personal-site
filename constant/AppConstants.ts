@@ -38,7 +38,7 @@ class AppConstants {
     { id: 2, url: "#about", label: "About" },
     { id: 3, url: "#experience", label: "Experience" },
     { id: 4, url: "#skills", label: "Skills" },
-    // { id: 5, url: "#projects", label: "Projects" },
+    { id: 5, url: "#projects", label: "Projects" },
     // { id: 6, url: "#testimonials", label: "Testimonials" },
     { id: 7, url: "#contact", label: "Contact" },
   ];
@@ -227,6 +227,34 @@ class AppConstants {
       creator: "@shubhampatel2610"
     }
   }
+
+  static PROJECTS = [
+    {
+      id: 1,
+      name: "Event Snap",
+      description: [
+        "Built a responsive fullstack event management platform using Next.js for event discovery, booking, and creation.",
+        "Leveraging advanced Next.js features (SSR, CSR, SSG, Server Components) to optimize performance and SEO.",
+        "Implementing scalable state management with Redux Toolkit and integrating Clerk authentication with Convex backend.",
+      ],
+      imagePath: "/projectImages/eventSnap.png",
+      techStacks: ["Next.js", "TypeScript", "Redux Toolkit", "Clerk", "Convex"],
+      sourceCodeLink: "https://github.com/shubhampatel2610/event-snap",
+      liveDemoLink: "https://event-snap-s26.vercel.app",
+    },
+    {
+      id: 2,
+      name: "Personal Site",
+      description: [
+        "Built a responsive personal portfolio site using Next.js to showcase skills and professional experience.",
+        "Implemented state management using MobX and followed a clean, scalable project structure with best practices.",
+      ],
+      imagePath: "/projectImages/personalSite.png",
+      techStacks: ["Next.js", "TypeScript", "MobX"],
+      sourceCodeLink: "https://github.com/shubhampatel2610/personal-site",
+      liveDemoLink: "https://shubham-patel-sde.vercel.app",
+    }
+  ];
 }
 
 export default AppConstants;

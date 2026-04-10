@@ -11,16 +11,11 @@ const TextAreaComponent = (props: InputTextareaComponentProps) => {
   const { value, onChange, label } = props;
   const id = label?.toLowerCase()?.replace(" ", "-");
 
+  const wrapperClasses = "flex align-items-center";
+
   return (
-    <div className="flex align-items-center">
-        <InputTextarea
-          id={id}
-          value={value}
-          onChange={(e) => onChange(e)}
-          rows={5}
-          maxLength={1000}
-          placeholder={label}
-        />
+    <div className={wrapperClasses}>
+      <InputTextarea id={id} value={value} onChange={(e) => onChange(e)} rows={5} maxLength={1000} placeholder={label} />
     </div>
   );
 };
