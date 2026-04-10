@@ -10,6 +10,7 @@ import ContactSection from "../components/ContactSection/ContactSection";
 import { useEffect, useRef, useState } from "react";
 import NavbarStore from "@/store/NavbarStore";
 import AppConstants from "@/constant/AppConstants";
+import ProjectSection from "../components/ProjectSection/ProjectSection";
 
 // ─── Scroll Progress Bar ───────────────────────────────────────────────────
 const ScrollProgressBar = () => {
@@ -107,7 +108,7 @@ const SectionDivider = () => {
 
 // ─── HomeSection ──────────────────────────────────────────────────────────
 const HomeSection = observer(() => {
-  useScrollSpy(["home", "about", "experience", "skills", "contact"]);
+  useScrollSpy(["home", "about", "experience", "skills", "projects", "contact"]);
 
   const getDeviceType = () => {
     const width = window.innerWidth;
@@ -131,6 +132,7 @@ const HomeSection = observer(() => {
     { id: "about", Component: ServiceSection },
     { id: "experience", Component: ExperienceSection },
     { id: "skills", Component: SkillSection },
+    { id: "projects", Component: ProjectSection },
     { id: "contact", Component: ContactSection },
   ];
 

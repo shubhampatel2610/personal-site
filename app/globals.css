@@ -221,6 +221,81 @@ body {
 }
 
 /* ─────────────────────────────────────────────
+   PRIMEREACT — CAROUSEL
+───────────────────────────────────────────── */
+.p-carousel .p-carousel-content {
+    overflow: hidden;
+}
+
+.p-carousel .p-carousel-items-container {
+    align-items: stretch !important;
+}
+
+.p-carousel .p-carousel-item {
+    display: flex !important;
+    align-items: stretch !important;
+    padding: 0.5rem !important;
+}
+
+/* Nav buttons */
+.p-carousel .p-carousel-prev,
+.p-carousel .p-carousel-next {
+    width: 1rem !important;
+    height: 1rem !important;
+    border-radius: 0.5rem !important;
+    color: var(--text-muted) !important;
+    transition: all 0.2s ease !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+}
+
+.p-carousel .p-carousel-prev:hover,
+.p-carousel .p-carousel-next:hover {
+    color: #ffffff !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+.p-carousel .p-carousel-prev:focus,
+.p-carousel .p-carousel-next:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Dots indicators */
+.p-carousel .p-carousel-indicators {
+    padding: 1rem 0 0 0 !important;
+    gap: 0.4rem !important;
+}
+
+.p-carousel .p-carousel-indicator button {
+    width: 1.5rem !important;
+    height: 4px !important;
+    border-radius: 999px !important;
+    background: var(--border-visible) !important;
+    border: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.p-carousel .p-carousel-indicator.p-highlight button {
+    width: 2.5rem !important;
+    background: var(--accent) !important;
+}
+
+.p-carousel .p-carousel-indicator button:hover {
+    background: var(--accent) !important;
+}
+
+.p-carousel .p-carousel-indicator button:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.p-carousel .p-carousel-item {
+    padding: 0 !important;
+}
+
+/* ─────────────────────────────────────────────
    KEYFRAMES (single source of truth)
 ───────────────────────────────────────────── */
 @keyframes fadeIn {
