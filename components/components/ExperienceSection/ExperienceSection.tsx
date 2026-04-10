@@ -17,6 +17,10 @@ const ExperienceSection = observer(() => {
   const timelineWrapperClasses = "relative flex flex-col gap-0";
   const timelineLineClasses = "absolute left-[7px] md:left-[11px] top-2 bottom-2 w-[2px] bg-gradient-to-b from-[#3B82F6]/40 via-[#3B82F6]/20 to-transparent rounded-full";
 
+  const experienceDetails = [...AppConstants.EXPERIENCE_DETAILS].sort(
+    (a, b) => b.id - a.id
+  );
+
   return (
     <section className={sectionClasses}>
       <div className={textureClasses} />
@@ -34,8 +38,8 @@ const ExperienceSection = observer(() => {
 
         <div className={timelineWrapperClasses}>
           <div className={timelineLineClasses} />
-          {AppConstants.EXPERIENCE_DETAILS.sort((a, b) => b.id - a.id).map((experience, index) => (
-            <ExperienceCard key={experience.id} experienceDetails={experience} />
+          {experienceDetails.map((experience, index) => (
+            <ExperienceCard key={experience.id} experienceDetails={experience} index={index} />
           ))}
         </div>
       </div>
