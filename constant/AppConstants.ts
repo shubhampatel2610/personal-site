@@ -161,6 +161,7 @@ class AppConstants {
   ];
 
   // Contact Section Constants
+  static CONTACT_SECTION_TITLE = "Get In Touch";
   static CONTACT_HEADER = "Let's Connect and Work Together!";
   static CONTACT_SUBHEADER =
     "Ready to bring your ideas to life? Get in touch with me today! even if you just want to say hii! I am always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Let's create something amazing together!";
@@ -227,6 +228,10 @@ class AppConstants {
       creator: "@shubhampatel2610"
     }
   }
+
+  // Project Section Constants
+  static PROJECT_SECTION_HEADER = "Projects";
+  static PROJECT_SECTION_TAGLINE = "From Concept to High Performance Applications";
 
   static PROJECTS = [
     {
