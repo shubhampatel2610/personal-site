@@ -11,7 +11,7 @@ const TextAreaComponent = (props: InputTextareaComponentProps) => {
   const { value, onChange, label } = props;
   const id = label?.toLowerCase()?.replace(" ", "-");
 
-  const wrapperClasses = "flex align-items-center";
+  const wrapperClasses = "flex items-center";
 
   return (
     <div className={wrapperClasses}>

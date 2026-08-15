@@ -3,7 +3,6 @@ import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import { PrimeReactProvider } from "primereact/api";
 import "./globals.css";
 import 'primeicons/primeicons.css';
-import 'primeflex/primeflex.css';
 import NavbarComponent from "@/components/components/NavbarComponent/NavbarComponent";
 import AppConstants from "@/constant/AppConstants";
 

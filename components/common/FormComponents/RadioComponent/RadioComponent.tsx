@@ -14,7 +14,7 @@ const RadioComponent = (props: RadioComponentProps) => {
   const { id, name, value, label, onChange, selectedValue } = props;
   const isChecked: boolean = selectedValue ? selectedValue === value : false;
 
-  const wrapperClasses = "flex align-items-center";
+  const wrapperClasses = "flex items-center";
   const labelClasses = "ml-2";
 
   return (
