@@ -6,8 +6,8 @@ interface SkillListRendererProps {
   direction?: "left" | "right";
 }
 
-const pillBaseClasses = "flex flex-col items-center justify-center w-[90px] h-[90px] shrink-0 rounded-xl p-2 bg-[var(--surface-2)] border border-[var(--border-subtle)] transition-all duration-200 cursor-default select-none";
-const pillHoverClasses = "hover:border-[var(--accent)] hover:bg-[var(--accent-10)] hover:shadow-[0_0_20px_var(--accent-15)] hover:-translate-y-1";
+const pillBaseClasses = "flex flex-col items-center justify-center w-[90px] h-[90px] shrink-0 rounded-md p-2 bg-[var(--surface-2)] border border-[var(--border-subtle)] transition-all duration-200 cursor-default select-none";
+const pillHoverClasses = "hover:border-[var(--accent)] hover:bg-[var(--accent-soft)] hover:-translate-y-1";
 const pillIconWrapperClasses = "w-full h-full flex items-center justify-center shrink-0 overflow-hidden p-1";
 const pillNameClasses = "text-[var(--text-muted)] text-[12px] font-medium text-center leading-tight w-full break-words hyphens-auto mb-1";
 const outerContainerClasses = "relative w-full overflow-hidden py-3 group";
