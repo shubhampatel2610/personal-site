@@ -32,6 +32,7 @@ const ProjectSection = () => {
                     circular
                     showIndicators
                     showNavigators
+                    autoplayInterval={5000} 
                 />
             </div>
         </section>

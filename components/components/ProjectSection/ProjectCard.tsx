@@ -40,8 +40,8 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                     <Image
                         src={imagePath}
                         alt={name}
-                        fill
-                        sizes="(min-width: 768px) 45vw, 90vw"
+                        width={800}
+                        height={300}
                         className={imageContentClasses}
                     />
                 ) : (
