@@ -258,6 +258,45 @@ class AppConstants {
       techStacks: ["Next.js", "TypeScript", "MobX"],
       sourceCodeLink: "https://github.com/shubhampatel2610/personal-site",
       liveDemoLink: "https://shubham-patel-sde.vercel.app",
+    },
+    {
+      id: 3,
+      name: "Sudoku Master",
+      description: [
+        "Built a Sudoku web app with a Practice mode for generating puzzles at Easy, Medium, and Hard difficulty and a Solver mode for solving custom 9x9 boards.",
+        "Implemented puzzle generation and solving with recursive backtracking, validating candidates against row, column, and 3x3 box constraints.",
+        "Added keyboard navigation, digit-only input, and toast notifications for a smooth solving experience.",
+      ],
+      imagePath: "",
+      techStacks: ["Next.js", "TypeScript", "TailwindCSS", "PrimeReact"],
+      sourceCodeLink: "https://github.com/shubhampatel2610/sudoku-app",
+      liveDemoLink: "https://sudoku-solver-app.vercel.app/",
+    },
+    {
+      id: 4,
+      name: "ShoppySpot",
+      description: [
+        "Built a React e-commerce app for browsing products with category and brand filtering, price range selection, and debounced search.",
+        "Centralized filter and search state in a MobX store so selections persist across navigation between the listing and product detail pages.",
+        "Fetched the full product catalog once from the DummyJSON API and handled filtering and pagination client-side to minimize API calls.",
+      ],
+      imagePath: "",
+      techStacks: ["React", "MobX", "React Router", "PrimeReact", "Tailwind CSS", "Vite"],
+      sourceCodeLink: "https://github.com/shubhampatel2610/shoppy-spot",
+      liveDemoLink: "https://shoppy-spot.vercel.app/",
+    },
+    {
+      id: 5,
+      name: "Tech Learner",
+      description: [
+        "Built an interactive DSA learning platform covering 15 topics from complexity analysis to graphs and dynamic programming.",
+        "Implemented interactive visualizers for arrays, tree traversal, heap operations, and DP tables alongside step-through dry runs and multi-language examples.",
+        "Added an XP system, daily streaks, auto-graded quizzes, and a study heatmap, with progress persisted locally.",
+      ],
+      imagePath: "",
+      techStacks: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+      sourceCodeLink: "https://github.com/shubhampatel2610/tech-learner",
+      liveDemoLink: "https://dsa-learnerr.vercel.app/",
     }
   ];
 }
