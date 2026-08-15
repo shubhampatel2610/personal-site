@@ -16,37 +16,45 @@ html {
    DESIGN TOKENS
 ───────────────────────────────────────────── */
 :root {
-    /* Backgrounds */
-    --site-bg: #0a0a0a;
-    --surface-1: #111111;
-    --surface-2: #1a1a1a;
+    /* Backgrounds — warm near-black, brown undertone */
+    --site-bg: #14120F;
+    --surface-1: #1B1712;
+    --surface-2: #221C15;
 
-    /* Text */
-    --site-text: #ffffff;
-    --text-muted: #a1a1aa;
-    --text-faint: #71717a;
+    /* Text — warm off-white */
+    --site-text: #F4EFE6;
+    --text-muted: #ADA394;
+    --text-faint: #756B5C;
 
-    /* Accent */
-    --accent: #3B82F6;
-    --accent-hover: #2563EB;
-    --accent-pressed: #1D4ED8;
-    --accent-glow: rgba(59, 130, 246, 0.15);
+    /* Accent — sharp amber */
+    --accent: #F0A030;
+    --accent-hover: #FFB84D;
+    --accent-pressed: #C77F16;
+    --accent-glow: rgba(240, 160, 48, 0.15);
+    --accent-soft: rgba(240, 160, 48, 0.10);
+    --accent-soft-strong: rgba(240, 160, 48, 0.20);
+    --accent-ink: #14120F;
 
     /* Borders */
-    --border-subtle: rgba(255, 255, 255, 0.06);
-    --border-visible: rgba(255, 255, 255, 0.12);
+    --border-subtle: rgba(244, 239, 230, 0.08);
+    --border-visible: rgba(244, 239, 230, 0.16);
 
     /* Buttons (legacy — mapped to accent) */
-    --site-button-bg: #3B82F6;
-    --site-button-hover-bg: #2563EB;
-    --site-links-hover: #3B82F6;
+    --site-button-bg: #F0A030;
+    --site-button-hover-bg: #FFB84D;
+    --site-links-hover: #F0A030;
 
     /* Scrollbar */
-    --scrollbar-thumb: rgba(255, 255, 255, 0.12);
-    --scrollbar-thumb-hover: rgba(255, 255, 255, 0.18);
-    --scrollbar-thumb-active: rgba(255, 255, 255, 0.22);
-    --scrollbar-track: rgba(255, 255, 255, 0.02);
+    --scrollbar-thumb: rgba(244, 239, 230, 0.12);
+    --scrollbar-thumb-hover: rgba(244, 239, 230, 0.18);
+    --scrollbar-thumb-active: rgba(244, 239, 230, 0.22);
+    --scrollbar-track: rgba(244, 239, 230, 0.02);
     --scrollbar-width: 8px;
+
+    /* Typography */
+    --font-body: var(--font-inter), Inter, system-ui, -apple-system, sans-serif;
+    --font-display: var(--font-space-grotesk), var(--font-inter), Inter, system-ui, sans-serif;
+    --font-mono: var(--font-jetbrains-mono), "SFMono-Regular", Consolas, monospace;
 }
 
 /* ─────────────────────────────────────────────
@@ -55,7 +63,7 @@ html {
 body {
     background: var(--site-bg);
     color: var(--site-text);
-    font-family: Inter, system-ui, -apple-system, sans-serif;
+    font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -63,6 +71,29 @@ body {
 .layoutStyles {
     background: var(--site-bg) !important;
     color: var(--site-text) !important;
+}
+
+.font-display {
+    font-family: var(--font-display);
+}
+
+.font-mono {
+    font-family: var(--font-mono);
+}
+
+/* ─────────────────────────────────────────────
+   REDUCED MOTION
+───────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 /* ─────────────────────────────────────────────
@@ -107,31 +138,36 @@ body {
 .p-button {
     height: 44px !important;
     padding: 0 1.25rem !important;
-    border-radius: 0.5rem !important;
+    border-radius: 0.375rem !important;
     border: 1px solid var(--accent) !important;
-    background: rgba(59, 130, 246, 0.1) !important;
+    background: var(--accent-soft) !important;
     color: var(--accent) !important;
     transition: all 0.2s ease !important;
+    font-family: var(--font-mono) !important;
 
     .p-button-label,
     .p-button-icon {
-        font-size: 0.875rem !important;
+        font-size: 0.8125rem !important;
         font-weight: 500 !important;
         color: var(--accent) !important;
     }
 
     &:hover {
-        background: rgba(59, 130, 246, 0.2) !important;
+        background: var(--accent-soft-strong) !important;
         border-color: var(--accent-hover) !important;
-        box-shadow: 0 0 16px var(--accent-glow) !important;
     }
 
     &:active {
-        background: rgba(59, 130, 246, 0.25) !important;
+        background: var(--accent-soft-strong) !important;
         transform: scale(0.98);
     }
 
-    &:focus {
+    &:focus-visible {
+        box-shadow: 0 0 0 2px var(--site-bg), 0 0 0 4px var(--accent) !important;
+        outline: none !important;
+    }
+
+    &:focus:not(:focus-visible) {
         box-shadow: none !important;
         outline: none !important;
     }
@@ -141,13 +177,35 @@ body {
     }
 }
 
+/* Solid primary CTA variant */
+.p-button.primary-cta {
+    background: var(--accent) !important;
+    border-color: var(--accent) !important;
+    color: var(--accent-ink) !important;
+
+    .p-button-label,
+    .p-button-icon {
+        color: var(--accent-ink) !important;
+    }
+
+    &:hover {
+        background: var(--accent-hover) !important;
+        border-color: var(--accent-hover) !important;
+    }
+
+    &:active {
+        background: var(--accent-pressed) !important;
+        border-color: var(--accent-pressed) !important;
+    }
+}
+
 /* ─────────────────────────────────────────────
    PRIMEREACT — CARD
 ───────────────────────────────────────────── */
 .p-card {
     background: var(--surface-1) !important;
     border: 1px solid var(--border-subtle) !important;
-    border-radius: 0.75rem !important;
+    border-radius: 0.5rem !important;
     box-shadow: none !important;
     color: var(--site-text) !important;
 }
@@ -184,7 +242,7 @@ body {
     background: var(--surface-2) !important;
     border: 1px solid var(--border-visible) !important;
     color: var(--site-text) !important;
-    border-radius: 0.5rem !important;
+    border-radius: 0.375rem !important;
     padding: 0.625rem 0.75rem !important;
     font-size: 0.875rem !important;
     transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
@@ -199,7 +257,7 @@ body {
 
     &:focus {
         border-color: var(--accent) !important;
-        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+        box-shadow: 0 0 0 3px var(--accent-soft) !important;
         outline: none !important;
         background: var(--surface-1) !important;
     }
@@ -251,7 +309,7 @@ body {
 
 .p-carousel .p-carousel-prev:hover,
 .p-carousel .p-carousel-next:hover {
-    color: #ffffff !important;
+    color: var(--accent) !important;
     box-shadow: none !important;
     background: transparent !important;
 }
