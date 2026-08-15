@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { useEffect } from "react";
@@ -20,28 +19,30 @@ const DesktopNavbarComponent = observer(() => {
 
   const isDesktop = NavbarStore.currentDevice === AppConstants.DESKTOP_DEVICE;
   const isMobile = NavbarStore.currentDevice === AppConstants.MOBILE_DEVICE;
+  const initials = AppConstants.USER_NAME.slice(0, 2).toUpperCase();
 
   const navBaseClasses = "w-full px-2 md:px-10 lg:px-16 h-16 flex items-center justify-between transition-all duration-300 ease-in-out";
   const navBgClasses = NavbarStore.navbgColor
-    ? "bg-[#0a0a0a]/95 shadow-[0_1px_40px_rgba(0,0,0,0.6)]"
+    ? "bg-[rgba(20,18,15,0.95)] shadow-[0_1px_40px_rgba(0,0,0,0.6)] border-b border-[var(--border-subtle)]"
     : "bg-transparent";
   const logoLinkClasses = "flex items-center gap-2.5 group select-none";
-  const logoIconClasses = "flex items-center justify-center p-2 rounded-lg bg-[#3B82F6]/10 border border-[#3B82F6]/20 group-hover:bg-[#3B82F6]/20 group-hover:border-[#3B82F6]/40 transition-all duration-300";
-  const logoTextClasses = "text-white font-semibold text-base tracking-tight group-hover:text-[#3B82F6] transition-colors duration-300";
+  const logoMarkClasses = "flex items-center justify-center px-2 py-1.5 rounded-md bg-[var(--accent-soft)] border border-[var(--accent)]/20 group-hover:border-[var(--accent)]/50 transition-all duration-300";
+  const logoMarkTextClasses = "font-mono text-[var(--accent)] text-sm font-medium tracking-tight";
+  const logoTextClasses = "font-display text-[var(--site-text)] font-semibold text-base tracking-tight group-hover:text-[var(--accent)] transition-colors duration-300";
   const navListClasses = "flex items-center gap-1";
   const navItemBaseClasses = "relative px-4 py-2 text-sm font-medium rounded-md transition-all duration-200 ease-in-out";
-  const navItemActiveClasses = "text-white";
-  const navItemInactiveClasses = "text-[#a1a1aa] hover:text-white";
+  const navItemActiveClasses = "text-[var(--site-text)]";
+  const navItemInactiveClasses = "text-[var(--text-muted)] hover:text-[var(--site-text)]";
   const actionGroupClasses = "flex items-center gap-3";
-  const buttonBaseClasses = "inline-flex items-center gap-2 rounded-lg text-sm font-medium transition-all duration-200 ease-in-out active:scale-[0.97]";
-  const downloadButtonClasses = `${buttonBaseClasses} p-3 md:px-4 md:py-2 border border-[#3B82F6]/30 text-[#3B82F6] bg-[#3B82F6]/5 hover:bg-[#3B82F6]/15 hover:border-[#3B82F6]/60 hover:shadow-[0_0_16px_rgba(59,130,246,0.2)]`;
-  const hamburgerButtonClasses = "flex items-center justify-center p-3 rounded-lg border border-white/[0.08] bg-white/[0.04] hover:bg-white/[0.08] hover:border-white/[0.15] text-[#a1a1aa] hover:text-white transition-all duration-200";
+  const buttonBaseClasses = "inline-flex items-center gap-2 rounded-md font-mono text-xs font-medium transition-all duration-200 ease-in-out active:scale-[0.97]";
+  const downloadButtonClasses = `${buttonBaseClasses} p-3 md:px-4 md:py-2 bg-[var(--accent)] text-[var(--accent-ink)] hover:bg-[var(--accent-hover)]`;
+  const hamburgerButtonClasses = "flex items-center justify-center p-3 rounded-md border border-[var(--border-visible)] bg-[var(--surface-1)] hover:border-[var(--accent)]/40 text-[var(--text-muted)] hover:text-[var(--site-text)] transition-all duration-200";
 
   return (
     <nav className={`${navBaseClasses} ${navBgClasses}`}>
       <Link href="/" className={logoLinkClasses}>
-        <span className={logoIconClasses}>
-          <i className="pi pi-code text-[#3B82F6] text-xl" />
+        <span className={logoMarkClasses}>
+          <span className={logoMarkTextClasses}>{`<${initials}/>`}</span>
         </span>
         <span className={logoTextClasses}>{AppConstants.USER_NAME}</span>
       </Link>
@@ -57,10 +58,10 @@ const DesktopNavbarComponent = observer(() => {
               <li key={link.id}>
                 <Link href={link.url} className={linkClasses}>
                   {isActive && (
-                    <span className="absolute inset-0 rounded-md bg-white/6 border border-white/8" />
+                    <span className="absolute inset-0 rounded-md bg-[var(--surface-2)] border border-[var(--border-visible)]" />
                   )}
                   {isActive && (
-                    <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#3B82F6]" />
+                    <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[var(--accent)]" />
                   )}
                   <span className="relative z-10">{link.label}</span>
                 </Link>

@@ -15,15 +15,15 @@ const socialLinks = [
 const ContactDetails = () => {
   const rootClasses = "flex flex-col gap-5 animate-[fadeSlideUp_0.5s_ease_both]";
   const headerClasses = "flex flex-col gap-3";
-  const titleClasses = "text-2xl md:text-3xl font-bold text-white tracking-tight";
-  const subtitleClasses = "text-[#a1a1aa] text-sm md:text-base leading-relaxed";
-  const dividerClasses = "w-full h-[1px] bg-gradient-to-r from-white/[0.08] to-transparent";
+  const titleClasses = "font-display text-2xl md:text-3xl font-semibold text-[var(--site-text)] tracking-tight";
+  const subtitleClasses = "text-[var(--text-muted)] text-sm md:text-base leading-relaxed";
+  const dividerClasses = "w-full h-px bg-[var(--border-subtle)]";
   const itemGroupClasses = "group flex items-center gap-4";
-  const iconBoxClasses = "flex items-center justify-center w-1 h-10 rounded-lg bg-[#1a1a1a] border border-white/[0.08] group-hover:border-[#3B82F6]/40 group-hover:bg-[#3B82F6]/10 transition-all duration-200";
-  const iconClasses = "text-[#3B82F6] text-sm";
-  const itemTextClasses = "text-[#a1a1aa] text-sm group-hover:text-white transition-colors duration-200";
+  const iconBoxClasses = "flex items-center justify-center w-10 h-10 shrink-0 rounded-md bg-[var(--surface-1)] border border-[var(--border-visible)] group-hover:border-[var(--accent)]/40 group-hover:bg-[var(--accent-soft)] transition-all duration-200";
+  const iconClasses = "text-[var(--accent)] text-sm";
+  const itemTextClasses = "text-[var(--text-muted)] text-sm group-hover:text-[var(--site-text)] transition-colors duration-200";
   const socialGroupClasses = "flex items-center gap-3";
-  const socialButtonClasses = "flex items-center justify-center w-full h-10 rounded-lg bg-[#1a1a1a] border border-white/[0.08] hover:border-[#3B82F6]/40 hover:bg-[#3B82F6]/10 hover:shadow-[0_0_16px_rgba(59,130,246,0.12)] text-[#a1a1aa] hover:text-white transition-all duration-200";
+  const socialButtonClasses = "flex items-center justify-center w-full h-10 rounded-md bg-[var(--surface-1)] border border-[var(--border-visible)] hover:border-[var(--accent)]/40 hover:bg-[var(--accent-soft)] text-[var(--text-muted)] hover:text-[var(--site-text)] transition-all duration-200";
 
   return (
     <div className={rootClasses}>
